@@ -1,0 +1,70 @@
+﻿@page
+@using Migrantes.App.Dominio
+@model Migrantes.App.Presentacion.Pages.RegistrarModel
+@{
+}
+
+<h1>Crear migrante</h1>
+
+<form method="post" class="scroll">
+    <div class="form-group">
+        <label asp-for="migrante.Nombre"></label>
+        <input asp-for="migrante.Nombre" class="form-control" required="requiered">
+
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.Apellidos"></label>
+        <input asp-for="migrante.Apellidos" class="form-control" required="requiered">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.TipoDocumento"></label>
+        <input asp-for="migrante.TipoDocumento" class="form-control" required="requiered">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.NumeroDocumento"></label>
+        <input asp-for="migrante.NumeroDocumento" class="form-control" required="requiered">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.PaisOrigen"></label>
+        <input asp-for="migrante.PaisOrigen" class="form-control" required="requiered">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.FechaNacimiento"></label>
+        <input asp-for="migrante.FechaNacimiento" class="form-control" required="requiered">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.Correo"></label>
+        <input asp-for="migrante.Correo" class="form-control" required="requiered">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.NumeroTelefono"></label>
+        <input asp-for="migrante.NumeroTelefono" class="form-control" required="requiered">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.Ciudad"></label>
+        <input asp-for="migrante.Ciudad" class="form-control" required="requiered">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.Ciudad"></label>
+        <input asp-for="migrante.Ciudad" class="form-control" required="requiered">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.SituacionLaboral"></label>
+        <input asp-for="migrante.SituacionLaboral" class="form-control" required="requiered">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Crear</button>
+    <a href="/migrantes/Index"><button type="button" class="btn btn-secundary">Regresar</button></a>
+
+</form>
