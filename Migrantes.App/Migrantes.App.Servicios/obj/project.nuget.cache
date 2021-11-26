@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "rwGZmM6EAOkUuuUcVoxWsRgdAn3V1u9vFj7KVzOV6aSXM/4hZ0BHFloR3aiWWR9Q6fmmCP2Ug4tTQSkM8rw0Ww==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ejpbr\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Servicios\\Migrantes.App.Servicios.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ejpbr\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\ejpbr\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\ejpbr\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\ejpbr\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\ejpbr\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\ejpbr\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
