@@ -11,12 +11,11 @@ namespace Migrantes.App.Presentacion.Pages
 {
     public class RegistrarModel : PageModel
     {
-
-        private readonly IrepositorioMigranMigrante _repoMigrante;
+private readonly IRepositorioMigrante _repoMigrante;
 
         public Migrante migrante {get;set;}
 
-        public RegistrarModel(IrepositorioMigrante _repoMigrante){
+        public RegistrarModel(IRepositorioMigrante _repoMigrante){
             this._repoMigrante = _repoMigrante;
         }
         public void OnGet()
@@ -24,9 +23,9 @@ namespace Migrantes.App.Presentacion.Pages
             migrante = new Migrante();
         }
 
-        public IActionResult OnPost(){
+        public IActionResult OnPost(Migrante migrante){
             _repoMigrante.AddMigrante(migrante);
-            return RedirectToPage("/Migrantes/Index");
+            return RedirectToPage("");
 
         }
     }

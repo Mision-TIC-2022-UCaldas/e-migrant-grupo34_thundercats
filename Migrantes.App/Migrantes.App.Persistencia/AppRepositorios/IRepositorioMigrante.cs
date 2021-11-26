@@ -8,9 +8,9 @@ namespace Migrantes.App.Persistencia
 
     IEnumerable<Migrante> GetAllMigrante ();
 
-    Migrante  AddMigrante (Migrante  Migrante );
+    Migrante  AddMigrante (Migrante  migrante );
 
-    Migrante  UpdateMigrante   (Migrante  Migrante );
+    Migrante  UpdateMigrante   (Migrante  migrante );
 
     void DeleteMigrante (int idMigrante );
 

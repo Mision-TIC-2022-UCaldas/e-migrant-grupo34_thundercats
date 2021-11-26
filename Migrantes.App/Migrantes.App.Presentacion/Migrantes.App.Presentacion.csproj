@@ -1,5 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
+  <ItemGroup>
+    <ProjectReference Include="..\Migrantes.App.Dominio\Migrantes.App.Dominio.csproj" />
+    <ProjectReference Include="..\Migrantes.App.Persistencia\Migrantes.App.Persistencia.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>

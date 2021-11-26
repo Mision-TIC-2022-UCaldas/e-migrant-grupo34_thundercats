@@ -14,9 +14,9 @@ namespace Migrantes.App.Persistencia{
         // public MigranteRepositorio(AppContext appContext){
         //     _appContext=appContext;
         // }
-        public Migrante AddMigrante(Migrante Migrante)
+        public Migrante AddMigrante(Migrante migrante)
         {
-            var MigranteAdicionado= _appContext.Migrantes.Add(Migrante);
+            var MigranteAdicionado= _appContext.Migrantes.Add(migrante);
             _appContext.SaveChanges();
             return MigranteAdicionado.Entity;
         }

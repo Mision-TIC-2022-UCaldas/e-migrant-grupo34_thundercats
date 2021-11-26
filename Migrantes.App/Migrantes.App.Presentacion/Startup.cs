@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Migrantes.App.Persistencia;
-using Migrantess.App.Dominio;
+using Migrantes.App.Dominio;
 
 namespace Migrantes.App.Presentacion
 {
