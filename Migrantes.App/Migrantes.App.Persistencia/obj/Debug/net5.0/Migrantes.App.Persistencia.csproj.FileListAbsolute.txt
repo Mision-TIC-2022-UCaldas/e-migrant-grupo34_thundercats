@@ -1,0 +1,5 @@
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Persistencia\obj\Debug\net5.0\Migrantes.App.Persistencia.csproj.AssemblyReference.cache
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Persistencia\obj\Debug\net5.0\Migrantes.App.Persistencia.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Persistencia\obj\Debug\net5.0\Migrantes.App.Persistencia.AssemblyInfoInputs.cache
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Persistencia\obj\Debug\net5.0\Migrantes.App.Persistencia.AssemblyInfo.cs
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Persistencia\obj\Debug\net5.0\Migrantes.App.Persistencia.csproj.CoreCompileInputs.cache
