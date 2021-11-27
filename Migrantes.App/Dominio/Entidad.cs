@@ -26,6 +26,7 @@ namespace Migrantes.App.Dominio
 
     public class Entidad
     {
+        public int Id {get;set;}
         public string RazonSocial {get;set;}
         public int Nit {get;set;}
         public string Direccion {get;set;}
