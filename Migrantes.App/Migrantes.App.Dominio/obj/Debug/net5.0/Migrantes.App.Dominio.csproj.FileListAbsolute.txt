@@ -1,0 +1,24 @@
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\bin\Debug\net5.0\Migrantes.App.Dominio.deps.json
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\bin\Debug\net5.0\Migrantes.App.Dominio.dll
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\bin\Debug\net5.0\ref\Migrantes.App.Dominio.dll
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\bin\Debug\net5.0\Migrantes.App.Dominio.pdb
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\obj\Debug\net5.0\Migrantes.App.Dominio.csproj.AssemblyReference.cache
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\obj\Debug\net5.0\Migrantes.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\obj\Debug\net5.0\Migrantes.App.Dominio.AssemblyInfoInputs.cache
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\obj\Debug\net5.0\Migrantes.App.Dominio.AssemblyInfo.cs
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\obj\Debug\net5.0\Migrantes.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\obj\Debug\net5.0\Migrantes.App.Dominio.dll
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\obj\Debug\net5.0\ref\Migrantes.App.Dominio.dll
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\obj\Debug\net5.0\Migrantes.App.Dominio.pdb
+C:\Users\ROSA AMPARO\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\bin\Debug\net5.0\Migrantes.App.Dominio.deps.json
+C:\Users\ROSA AMPARO\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\bin\Debug\net5.0\Migrantes.App.Dominio.dll
+C:\Users\ROSA AMPARO\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\bin\Debug\net5.0\ref\Migrantes.App.Dominio.dll
+C:\Users\ROSA AMPARO\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\bin\Debug\net5.0\Migrantes.App.Dominio.pdb
+C:\Users\ROSA AMPARO\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\obj\Debug\net5.0\Migrantes.App.Dominio.csproj.AssemblyReference.cache
+C:\Users\ROSA AMPARO\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\obj\Debug\net5.0\Migrantes.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ROSA AMPARO\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\obj\Debug\net5.0\Migrantes.App.Dominio.AssemblyInfoInputs.cache
+C:\Users\ROSA AMPARO\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\obj\Debug\net5.0\Migrantes.App.Dominio.AssemblyInfo.cs
+C:\Users\ROSA AMPARO\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\obj\Debug\net5.0\Migrantes.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\ROSA AMPARO\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\obj\Debug\net5.0\Migrantes.App.Dominio.dll
+C:\Users\ROSA AMPARO\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\obj\Debug\net5.0\ref\Migrantes.App.Dominio.dll
+C:\Users\ROSA AMPARO\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Dominio\obj\Debug\net5.0\Migrantes.App.Dominio.pdb
