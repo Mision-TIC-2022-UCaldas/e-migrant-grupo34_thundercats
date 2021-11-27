@@ -9,8 +9,8 @@ using Migrantes.App.Persistencia;
 namespace Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20211127192115_Entidad")]
-    partial class Entidad
+    [Migration("20211127212455_Entidades")]
+    partial class Entidades
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -45,18 +45,18 @@ namespace Persistencia.Migrations
                     b.Property<string>("RazonSocial")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Sector")
-                        .HasColumnType("int");
+                    b.Property<string>("Sector")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Telefono")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TipoServicio")
-                        .HasColumnType("int");
+                    b.Property<string>("TipoServicio")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Entidad");
+                    b.ToTable("Entidades");
                 });
 #pragma warning restore 612, 618
         }

@@ -35,8 +35,8 @@ namespace Migrantes.App.Dominio
         public string DireccionElectronica {get;set;}
         public string PaginaWeb {get;set;}
 
-        public Sector Sector {get; set;}
-        public TipoServicio TipoServicio {get; set;}
+        public string Sector {get; set;}
+        public string TipoServicio {get; set;}
 
     }
 }

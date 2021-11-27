@@ -43,18 +43,18 @@ namespace Persistencia.Migrations
                     b.Property<string>("RazonSocial")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Sector")
-                        .HasColumnType("int");
+                    b.Property<string>("Sector")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Telefono")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TipoServicio")
-                        .HasColumnType("int");
+                    b.Property<string>("TipoServicio")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Entidad");
+                    b.ToTable("Entidades");
                 });
 #pragma warning restore 612, 618
         }
