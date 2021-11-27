@@ -1,18 +1,22 @@
 ﻿@page
-@model Migrantes.App.Presentacion.Pages.RegistrarModel
+@model Migrantes.App.Presentacion.Pages.ActualizarModel
 @{
-
 }
 
-<h1>Creacion de migrantes</h1>
+<h1>Actualizacion de datos</h1>
+
 
 <form method="post" class="scroll">
+
+<div class="form-group col">
+        <label asp-for="migrante.Id" type="Hidden">ID </label>    
+        <input asp-for="migrante.Id" class="form-control" placeholder="" required="required" readonly type="hidden">
+    </div>
+
     <div class="form-group">
         <label asp-for="migrante.Nombre"></label>
         <input asp-for="migrante.Nombre" class="form-control" required="requiered">
-
     </div>
-
     <div class="form-group">
         <label asp-for="migrante.Apellidos"></label>
         <input asp-for="migrante.Apellidos" class="form-control" required="requiered">
