@@ -25,7 +25,7 @@ private readonly IRepositorioMigrante _repoMigrante;
 
         public IActionResult OnPost(Migrante migrante){
             _repoMigrante.AddMigrante(migrante);
-            return RedirectToPage("");
+            return RedirectToPage("/User/VistaMigrante");
 
         }
     }

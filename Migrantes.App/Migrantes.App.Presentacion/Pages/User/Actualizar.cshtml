@@ -1,0 +1,91 @@
+﻿@page
+@model Migrantes.App.Presentacion.Pages.ActualizarModel
+@{
+}
+
+<h1>Actualizacion de datos</h1>
+
+
+<form method="post" class="scroll">
+
+<div class="form-group col">
+        <label asp-for="migrante.Id" type="Hidden">ID </label>    
+        <input asp-for="migrante.Id" class="form-control" placeholder="" required="required" readonly type="hidden">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.Nombre"></label>
+        <input asp-for="migrante.Nombre" class="form-control" required="requiered">
+    </div>
+    <div class="form-group">
+        <label asp-for="migrante.Apellidos"></label>
+        <input asp-for="migrante.Apellidos" class="form-control" required="requiered">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.TipoDocumento"></label>
+        <input asp-for="migrante.TipoDocumento" class="form-control" required="requiered">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.NumeroDocumento"></label>
+        <input asp-for="migrante.NumeroDocumento" class="form-control" required="requiered">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.PaisOrigen"></label>
+        <input asp-for="migrante.PaisOrigen" class="form-control" required="requiered">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.FechaNacimiento"></label>
+        <input asp-for="migrante.FechaNacimiento" class="form-control" required="requiered">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.Correo"></label>
+        <input asp-for="migrante.Correo" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.NumeroTelefono"></label>
+        <input asp-for="migrante.NumeroTelefono" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.DireccionActual"></label>
+        <input asp-for="migrante.DireccionActual" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.Ciudad"></label>
+        <input asp-for="migrante.Ciudad" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.SituacionLaboral"></label>
+        <input asp-for="migrante.SituacionLaboral" class="form-control">
+    </div>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Crear</button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registro exitoso</h5>
+                    <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Se creacion de usuario fue exitoso, bienvenido
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" >Cerrar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
