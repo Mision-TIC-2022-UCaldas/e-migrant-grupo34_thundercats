@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servicios", "Migrantes.App.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consola", "Migrantes.App.Consola\Consola.csproj", "{379D3B06-4C34-4ECA-8604-AFA56095B969}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Migrantes.App.Presentacion", "Migrantes.App.Presentacion\Migrantes.App.Presentacion.csproj", "{6FC2E4B5-45B6-4EE2-8036-436037B8C34D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,17 @@ Global
 		{379D3B06-4C34-4ECA-8604-AFA56095B969}.Release|x64.Build.0 = Release|Any CPU
 		{379D3B06-4C34-4ECA-8604-AFA56095B969}.Release|x86.ActiveCfg = Release|Any CPU
 		{379D3B06-4C34-4ECA-8604-AFA56095B969}.Release|x86.Build.0 = Release|Any CPU
+		{6FC2E4B5-45B6-4EE2-8036-436037B8C34D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FC2E4B5-45B6-4EE2-8036-436037B8C34D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FC2E4B5-45B6-4EE2-8036-436037B8C34D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6FC2E4B5-45B6-4EE2-8036-436037B8C34D}.Debug|x64.Build.0 = Debug|Any CPU
+		{6FC2E4B5-45B6-4EE2-8036-436037B8C34D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6FC2E4B5-45B6-4EE2-8036-436037B8C34D}.Debug|x86.Build.0 = Debug|Any CPU
+		{6FC2E4B5-45B6-4EE2-8036-436037B8C34D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FC2E4B5-45B6-4EE2-8036-436037B8C34D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FC2E4B5-45B6-4EE2-8036-436037B8C34D}.Release|x64.ActiveCfg = Release|Any CPU
+		{6FC2E4B5-45B6-4EE2-8036-436037B8C34D}.Release|x64.Build.0 = Release|Any CPU
+		{6FC2E4B5-45B6-4EE2-8036-436037B8C34D}.Release|x86.ActiveCfg = Release|Any CPU
+		{6FC2E4B5-45B6-4EE2-8036-436037B8C34D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
