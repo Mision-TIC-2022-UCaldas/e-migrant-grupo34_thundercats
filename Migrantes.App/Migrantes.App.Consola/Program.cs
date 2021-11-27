@@ -18,15 +18,15 @@ namespace Migrantes.App.Consola
         static private void TestRepoEntidad() {
             var newEntity = new Entidad
             {
-                RazonSocial = "Venta",
-                Nit = 12345,
-                Ciudad = "Barranquilla",
+                RazonSocial = "Helados",
+                Nit = 46484784,
+                Ciudad = "Medellin",
                 Direccion = "algo",
                 Telefono = "algo",
                 DireccionElectronica = "algo",
                 PaginaWeb = "algo",
-                Sector = Migrantes.App.Dominio.Sector.Publico,
-                TipoServicio = Migrantes.App.Dominio.TipoServicio.Salud
+                Sector = Migrantes.App.Dominio.Sector.Otro,
+                TipoServicio = Migrantes.App.Dominio.TipoServicio.Educacion
             };
 
             Entidad nueva = _repoEntidad.Add(newEntity);
@@ -38,9 +38,9 @@ namespace Migrantes.App.Consola
             var entidades = _repoEntidad.GetAll();
             Console.WriteLine(entidades);
 
-            obtenida.Ciudad = "Bogota";
-            Entidad modificada = _repoEntidad.Update(obtenida);
-            Console.WriteLine("Modificada:" + (nueva.Ciudad));
+            // obtenida.Ciudad = "Medellin";
+            // Entidad modificada = _repoEntidad.Update(obtenida);
+            // Console.WriteLine("Modificada:" + (nueva.Ciudad));
 
             // bool result = _repoEntidad.Delete(nueva.Id);
             // Console.WriteLine("Borrada: " + result);

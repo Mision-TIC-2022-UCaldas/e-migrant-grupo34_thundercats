@@ -9,6 +9,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
+using Migrantes.App.Persistencia;
+using Migrantes.App.Dominio;
+
 namespace Migrantes.App.Presentacion
 {
     public class Startup
@@ -24,6 +27,12 @@ namespace Migrantes.App.Presentacion
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            // services.AddDbContext<AppContext>();
+
+            services.AddControllersWithViews();
+
+            services.AddSingleton<IRepositorioEntidad,RepositorioEntidad>();
+            // services.AddSingleton<IRepositorioPersona,RepositorioPersona>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
