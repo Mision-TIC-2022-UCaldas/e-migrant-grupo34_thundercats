@@ -9,11 +9,11 @@ namespace Migrantes.App.Persistencia{
         public DbSet <Entidad> Entidad {get;set;}
         // public DbSet <Migrante> Migrantes {get;set;}
 
-        // protected override void OnConfiguring (DbContextOptionsBuilder optionsBuilder ){
-        //     if (!optionsBuilder.IsConfigured){
-        //         optionsBuilder.UseSqlServer("Data Source =(localdb)\\MSSQLLocalDB; Initial Catalog=Thundercats");
-        //     }
-        // }
+        protected override void OnConfiguring (DbContextOptionsBuilder optionsBuilder ){
+            if (!optionsBuilder.IsConfigured){
+                optionsBuilder.UseSqlServer("Data Source =(localdb)\\MSSQLLocalDB; Initial Catalog=Thundercats");
+            }
+        }
 
     }
 }
