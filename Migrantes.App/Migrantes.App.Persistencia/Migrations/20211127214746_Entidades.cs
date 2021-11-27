@@ -19,8 +19,8 @@ namespace Persistencia.Migrations
                     Telefono = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DireccionElectronica = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PaginaWeb = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Sector = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TipoServicio = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Sector = table.Column<int>(type: "int", nullable: false),
+                    TipoServicio = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

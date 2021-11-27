@@ -9,7 +9,7 @@ using Migrantes.App.Persistencia;
 namespace Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20211127212455_Entidades")]
+    [Migration("20211127214746_Entidades")]
     partial class Entidades
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -45,14 +45,14 @@ namespace Persistencia.Migrations
                     b.Property<string>("RazonSocial")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Sector")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Sector")
+                        .HasColumnType("int");
 
                     b.Property<string>("Telefono")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TipoServicio")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("TipoServicio")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

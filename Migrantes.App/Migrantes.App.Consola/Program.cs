@@ -25,8 +25,8 @@ namespace Migrantes.App.Consola
                 Telefono = "algo",
                 DireccionElectronica = "algo",
                 PaginaWeb = "algo",
-                Sector = "Migrantes.App.Dominio.Sector.Publico",
-                TipoServicio = "Migrantes.App.Dominio.TipoServicio.Salud"
+                Sector = Migrantes.App.Dominio.Sector.Publico,
+                TipoServicio = Migrantes.App.Dominio.TipoServicio.Salud
             };
 
             Entidad nueva = _repoEntidad.Add(newEntity);
@@ -42,8 +42,8 @@ namespace Migrantes.App.Consola
             Entidad modificada = _repoEntidad.Update(obtenida);
             Console.WriteLine("Modificada:" + (nueva.Ciudad));
 
-            bool result = _repoEntidad.Delete(nueva.Id);
-            Console.WriteLine("Borrada: " + result);
+            // bool result = _repoEntidad.Delete(nueva.Id);
+            // Console.WriteLine("Borrada: " + result);
 
         }
 
