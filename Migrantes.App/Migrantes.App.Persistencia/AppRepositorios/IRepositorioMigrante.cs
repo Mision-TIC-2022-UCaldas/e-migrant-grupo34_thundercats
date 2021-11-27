@@ -14,6 +14,6 @@ namespace Migrantes.App.Persistencia
 
     void DeleteMigrante (int idMigrante );
 
-    Migrante  GetMigrante (int idMigrante );
+    Migrante  GetMigrante (string NumeroDocumento );
     }
 }

@@ -22,9 +22,9 @@ namespace Migrantes.App.Presentacion.Pages
             this._Repomigrante=_Repomigrante;
             this.idverificacion=idverificacion;
         }
-        public void OnGet(int idverificacion)
+        public void OnGet()
         {
-            migrante=_Repomigrante.GetMigrante(idverificacion);
+           
         
         }
         }

@@ -13,35 +13,38 @@ namespace Migrantes.App.Presentacion.Pages
     {
 
         private readonly IRepositorioMigrante _repoMigrante;
-        public string numeroDocumento{get;set;}
+        public string numeroDocumento { get; set; }
 
-        public Migrante migrante {get;set;}
-       // [BindProperty(SupportsGet= true)]
-       // public string numeroDocumento{get;set;} = string.Empty;
+        public Migrante migrante { get; set; }
+        public Migrante migrante1 { get; set; }
+        // [BindProperty(SupportsGet= true)]
+        // public string numeroDocumento{get;set;} = string.Empty;
 
-        public ConsultarModel (IRepositorioMigrante _repoMigrante){
+        public ConsultarModel(IRepositorioMigrante _repoMigrante)
+        {
             this._repoMigrante = _repoMigrante;
         }
         public void OnGet(string numeroDocumento)
         {
-            migrante=_repoMigrante.GetMigrante(numeroDocumento);
-            Console.WriteLine(numeroDocumento);
-            if(migrante==null){
+            migrante = _repoMigrante.GetMigrante(numeroDocumento);
 
-               
-                Console.WriteLine("No encontro");
+            Console.WriteLine(numeroDocumento);
+            if (migrante == null)
+            {
+                Console.WriteLine(numeroDocumento);
             }
-            else{
-                Console.WriteLine("Encontro");
-                
-              
+
+            else
+            {
+                Console.WriteLine(numeroDocumento);
+
             }
         }
-
-        public IActionResult OnPost(Migrante migrante){
-           // _repoMigrante.UpdateMigrante(migrante);
+        public IActionResult OnPost(Migrante migrante)
+        {
+            _repoMigrante.UpdateMigrante(migrante);
             return RedirectToPage("");
-           
+
         }
     }
 }

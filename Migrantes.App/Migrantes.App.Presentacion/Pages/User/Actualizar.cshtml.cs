@@ -19,27 +19,6 @@ namespace Migrantes.App.Presentacion.Pages
         {
             this._repoMigrante=_repoMigrante;
         }
-
-        public IActionResult OnGet(int id)
-        {
-            
-            migrante=_repoMigrante.GetMigrante(id);
-
-            if(migrante ==null)
-            {
-                return NotFound();
-            }
-            else{
-                return Page();
-            }
-
-        }
-        public IActionResult OnPost(Migrante migrante){
-
-            _repoMigrante.UpdateMigrante(migrante);
-            return RedirectToPage("/User/VistaMigrante");
-
-         }
     }
 }
 

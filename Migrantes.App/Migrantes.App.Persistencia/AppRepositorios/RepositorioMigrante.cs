@@ -35,9 +35,9 @@ namespace Migrantes.App.Persistencia{
             return _appContext.Migrantes;
         }
 
-        public Migrante GetMigrante(int idMigrante)
+        public Migrante GetMigrante(string NumeroDocumento)
         {
-            return _appContext.Migrantes.FirstOrDefault(p =>p.Id==idMigrante);
+            return _appContext.Migrantes.FirstOrDefault(p =>p.NumeroDocumento==NumeroDocumento);
         }
 
         public Migrante UpdateMigrante(Migrante Migrante)

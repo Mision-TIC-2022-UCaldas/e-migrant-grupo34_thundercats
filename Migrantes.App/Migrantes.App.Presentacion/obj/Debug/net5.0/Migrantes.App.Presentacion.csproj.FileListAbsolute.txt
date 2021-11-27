@@ -73,3 +73,4 @@ C:\Users\ROSA AMPARO\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.Ap
 C:\Users\ROSA AMPARO\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Presentacion\obj\Debug\net5.0\Razor\Pages\User\Registrar.cshtml.g.cs
 C:\Users\ROSA AMPARO\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Presentacion\obj\Debug\net5.0\Razor\Pages\User\Actualizar.cshtml.g.cs
 C:\Users\ROSA AMPARO\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Presentacion\obj\Debug\net5.0\Razor\Pages\User\VistaMigrante.cshtml.g.cs
+C:\Users\ROSA AMPARO\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Presentacion\obj\Debug\net5.0\Razor\Pages\User\Consultar.cshtml.g.cs
