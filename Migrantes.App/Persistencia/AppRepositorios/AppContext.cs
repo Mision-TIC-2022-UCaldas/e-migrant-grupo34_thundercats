@@ -11,7 +11,7 @@ namespace Migrantes.App.Persistencia{
 
         protected override void OnConfiguring (DbContextOptionsBuilder optionsBuilder ){
             if (!optionsBuilder.IsConfigured){
-                optionsBuilder.UseSqlServer("Data Source =(localdb)\\MSSQLLocalDB; Initial Catalog=Thundercats");
+                optionsBuilder.UseSqlServer(@"Data Source=localhost;Initial Catalog = Thundercats;Integrated Security = True");
             }
         }
 
