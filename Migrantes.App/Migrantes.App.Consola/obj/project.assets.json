@@ -5796,19 +5796,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ROSA AMPARO\\.nuget\\packages\\": {}
+    "C:\\Users\\ejpbr\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ROSA AMPARO\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Consola\\Migrantes.App.Consola.csproj",
+      "projectUniqueName": "C:\\Users\\ejpbr\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Consola\\Migrantes.App.Consola.csproj",
       "projectName": "Migrantes.App.Consola",
-      "projectPath": "C:\\Users\\ROSA AMPARO\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Consola\\Migrantes.App.Consola.csproj",
-      "packagesPath": "C:\\Users\\ROSA AMPARO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ROSA AMPARO\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Consola\\obj\\",
+      "projectPath": "C:\\Users\\ejpbr\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Consola\\Migrantes.App.Consola.csproj",
+      "packagesPath": "C:\\Users\\ejpbr\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ejpbr\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Consola\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ROSA AMPARO\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\ejpbr\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -5820,11 +5820,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\ROSA AMPARO\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Dominio\\Migrantes.App.Dominio.csproj": {
-              "projectPath": "C:\\Users\\ROSA AMPARO\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Dominio\\Migrantes.App.Dominio.csproj"
+            "C:\\Users\\ejpbr\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Dominio\\Migrantes.App.Dominio.csproj": {
+              "projectPath": "C:\\Users\\ejpbr\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Dominio\\Migrantes.App.Dominio.csproj"
             },
-            "C:\\Users\\ROSA AMPARO\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Persistencia\\Migrantes.App.Persistencia.csproj": {
-              "projectPath": "C:\\Users\\ROSA AMPARO\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Persistencia\\Migrantes.App.Persistencia.csproj"
+            "C:\\Users\\ejpbr\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Persistencia\\Migrantes.App.Persistencia.csproj": {
+              "projectPath": "C:\\Users\\ejpbr\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Persistencia\\Migrantes.App.Persistencia.csproj"
             }
           }
         }

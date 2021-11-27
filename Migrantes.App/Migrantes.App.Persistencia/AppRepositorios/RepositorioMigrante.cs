@@ -64,5 +64,42 @@ namespace Migrantes.App.Persistencia{
             }
             return MigranteEncontrado;
         }
+
+
+        void IRepositorioMigrante.AddAmigosYFamiliares(string NumeroDocumento, AmigosYFamiliares AmigosYFamiliares){
+
+             var Migrante= _appContext.Migrantes.Find(NumeroDocumento);
+            if(Migrante!=null){
+                if(Migrante.AmigosYFamiliares!=null){
+                    Migrante.AmigosYFamiliares.Add(AmigosYFamiliares);
+                }
+                else{
+                    Migrante.AmigosYFamiliares = new List<AmigosYFamiliares>();
+                    Migrante.AmigosYFamiliares.Add(AmigosYFamiliares);
+                }
+            var MigranteEncontrado = _appContext.Migrantes.FirstOrDefault(p => p.NumeroDocumento==  Migrante.NumeroDocumento);
+            if (MigranteEncontrado!=null)
+            
+            {
+                MigranteEncontrado.Nombre=Migrante.Nombre;
+                MigranteEncontrado.Apellidos=Migrante.Apellidos;
+                MigranteEncontrado.TipoDocumento=Migrante.TipoDocumento;
+                MigranteEncontrado.NumeroDocumento=Migrante.NumeroDocumento;
+                MigranteEncontrado.PaisOrigen=Migrante.PaisOrigen;
+                MigranteEncontrado.FechaNacimiento=Migrante.FechaNacimiento;
+                MigranteEncontrado.Correo=Migrante.Correo;
+                MigranteEncontrado.NumeroTelefono=Migrante.NumeroTelefono;
+                MigranteEncontrado.DireccionActual=Migrante.DireccionActual;
+                MigranteEncontrado.Ciudad=Migrante.Ciudad;
+                MigranteEncontrado.SituacionLaboral=Migrante.SituacionLaboral;
+                MigranteEncontrado.AmigosYFamiliares = Migrante.AmigosYFamiliares;
+
+              
+
+               _appContext.SaveChanges();
+            }
+            
+        }
+        }
     }
 }

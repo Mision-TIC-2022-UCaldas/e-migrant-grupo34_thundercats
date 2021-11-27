@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\ROSA AMPARO\\.nuget\\packages\\": {}
+    "C:\\Users\\ejpbr\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ROSA AMPARO\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Dominio\\Migrantes.App.Dominio.csproj",
+      "projectUniqueName": "C:\\Users\\ejpbr\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Dominio\\Migrantes.App.Dominio.csproj",
       "projectName": "Migrantes.App.Dominio",
-      "projectPath": "C:\\Users\\ROSA AMPARO\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Dominio\\Migrantes.App.Dominio.csproj",
-      "packagesPath": "C:\\Users\\ROSA AMPARO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ROSA AMPARO\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Dominio\\obj\\",
+      "projectPath": "C:\\Users\\ejpbr\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Dominio\\Migrantes.App.Dominio.csproj",
+      "packagesPath": "C:\\Users\\ejpbr\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ejpbr\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ROSA AMPARO\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\ejpbr\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"

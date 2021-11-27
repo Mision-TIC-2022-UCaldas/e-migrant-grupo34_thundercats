@@ -21,3 +21,16 @@ C:\Users\ROSA AMPARO\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.Ap
 C:\Users\ROSA AMPARO\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\MIgrantes.App.Persistencia\obj\Debug\net5.0\ref\Migrantes.App.Persistencia.dll
 C:\Users\ROSA AMPARO\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\MIgrantes.App.Persistencia\obj\Debug\net5.0\Migrantes.App.Persistencia.pdb
 C:\Users\ROSA AMPARO\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\MIgrantes.App.Persistencia\obj\Debug\net5.0\Migrantes.App.Persistencia.genruntimeconfig.cache
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Persistencia\obj\Debug\net5.0\Migrantes.App.Persistencia.dll
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Persistencia\obj\Debug\net5.0\ref\Migrantes.App.Persistencia.dll
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Persistencia\obj\Debug\net5.0\Migrantes.App.Persistencia.pdb
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Persistencia\bin\Debug\net5.0\Migrantes.App.Persistencia.deps.json
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Persistencia\bin\Debug\net5.0\Migrantes.App.Persistencia.runtimeconfig.json
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Persistencia\bin\Debug\net5.0\Migrantes.App.Persistencia.runtimeconfig.dev.json
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Persistencia\bin\Debug\net5.0\Migrantes.App.Persistencia.dll
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Persistencia\bin\Debug\net5.0\ref\Migrantes.App.Persistencia.dll
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Persistencia\bin\Debug\net5.0\Migrantes.App.Persistencia.pdb
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Persistencia\bin\Debug\net5.0\Migrantes.App.Dominio.dll
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Persistencia\bin\Debug\net5.0\Migrantes.App.Dominio.pdb
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Persistencia\obj\Debug\net5.0\Migrantes.App.Persistencia.csproj.CopyComplete
+C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Persistencia\obj\Debug\net5.0\Migrantes.App.Persistencia.genruntimeconfig.cache
