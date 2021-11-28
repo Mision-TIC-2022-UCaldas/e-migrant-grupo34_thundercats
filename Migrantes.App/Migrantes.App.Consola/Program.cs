@@ -9,13 +9,28 @@ namespace Migrantes.App.Consola
     {
 
         private static IRepositorioEntidad _repoEntidad = new RepositorioEntidad();
+        private static IRepositorioServicio _repoServicio = new RepositorioServicio();
+
         static void Main(string[] args)
         {
             Console.WriteLine("Testing Entidades");
             TestRepoEntidad();
+            // TestRepoServicio();
+
 
         }
 
+        static private void TestRepoServicio() {
+            var newEntity = new Servicio {
+                                NombreServicio = "Cualquiera",
+                                MaxMigrantes = 5,
+                                FechaInicioOferta = new DateTime(2021,11,26),
+                                FechaFinOferta = new DateTime(2021,11,26),
+                                EstadoServicio = Migrantes.App.Dominio.EstadoServicio.Activo
+                            };
+            Servicio nueva = _repoServicio.Add(newEntity);
+            _repoServicio.Delete(newEntity.Id);
+        }
         static private void TestRepoEntidad() {
             var newEntity = new Entidad
             {

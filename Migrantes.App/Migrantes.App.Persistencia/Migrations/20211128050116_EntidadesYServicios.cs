@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Persistencia.Migrations
 {
-    public partial class EntidadesServicios : Migration
+    public partial class EntidadesYServicios : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -29,7 +29,7 @@ namespace Persistencia.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Servicio",
+                name: "Servicios",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -43,9 +43,9 @@ namespace Persistencia.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Servicio", x => x.Id);
+                    table.PrimaryKey("PK_Servicios", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Servicio_Entidades_EntidadId",
+                        name: "FK_Servicios_Entidades_EntidadId",
                         column: x => x.EntidadId,
                         principalTable: "Entidades",
                         principalColumn: "Id",
@@ -53,15 +53,15 @@ namespace Persistencia.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Servicio_EntidadId",
-                table: "Servicio",
+                name: "IX_Servicios_EntidadId",
+                table: "Servicios",
                 column: "EntidadId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Servicio");
+                name: "Servicios");
 
             migrationBuilder.DropTable(
                 name: "Entidades");

@@ -87,7 +87,7 @@ namespace Persistencia.Migrations
 
                     b.HasIndex("EntidadId");
 
-                    b.ToTable("Servicio");
+                    b.ToTable("Servicios");
                 });
 
             modelBuilder.Entity("Migrantes.App.Dominio.Servicio", b =>

@@ -7,6 +7,7 @@ namespace Migrantes.App.Persistencia{
     public class AppDbContext:DbContext{
 
         public DbSet <Entidad> Entidades {get;set;}
+        public DbSet <Servicio> Servicios {get;set;}
         // public DbSet <Migrante> Migrantes {get;set;}
 
         protected override void OnConfiguring (DbContextOptionsBuilder optionsBuilder ){

@@ -10,8 +10,8 @@ using Migrantes.App.Persistencia;
 namespace Persistencia.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20211128042539_EntidadesServicios")]
-    partial class EntidadesServicios
+    [Migration("20211128050116_EntidadesYServicios")]
+    partial class EntidadesYServicios
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -89,7 +89,7 @@ namespace Persistencia.Migrations
 
                     b.HasIndex("EntidadId");
 
-                    b.ToTable("Servicio");
+                    b.ToTable("Servicios");
                 });
 
             modelBuilder.Entity("Migrantes.App.Dominio.Servicio", b =>
