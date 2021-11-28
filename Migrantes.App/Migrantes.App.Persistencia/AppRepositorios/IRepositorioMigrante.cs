@@ -12,13 +12,13 @@ namespace Migrantes.App.Persistencia
 
     Migrante  UpdateMigrante   (Migrante  migrante );
 
-    void DeleteMigrante (int idMigrante );
+    bool DeleteMigrante (int idMigrante );
 
-    Migrante  GetMigrante (int NumeroDocumento );
+    Migrante  GetMigrante (int NumeroDocumento );   // Antes recibia un string
 
-    void AddAmigosYFamiliares (Migrante amigoofamiliar);
+    bool AddAmigosYFamiliares (int idMigrante, Migrante  migrante); // Id del nuevo amigo o familiar
 
-   void AddNecesidades (int idMigrante, Necesidades necesidades);
+    bool AddNecesidades (int idMigrante, Necesidades necesidades);
 
     }
 }
