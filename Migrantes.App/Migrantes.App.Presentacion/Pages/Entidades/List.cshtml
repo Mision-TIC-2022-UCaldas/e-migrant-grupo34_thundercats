@@ -5,6 +5,16 @@
 
 <h1>Listado de Entidades asociadas a su usuario</h1>
 <table class="table">
+<tr>
+    @* <th>Id</th> *@
+    <th>Razon Social</th>
+    @* <th>Type</th> *@
+    <th>
+        <a class="btn btn-success" asp-page="./Edit">
+            Add
+        </a>
+    </th>
+</tr>
 @foreach (var entity in Model.Entities)
 {
     <tr>
