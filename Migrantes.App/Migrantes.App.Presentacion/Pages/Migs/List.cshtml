@@ -12,7 +12,12 @@
     @* <th>Type</th> *@
     <th>
         <a class="btn btn-success" asp-page="./Registrar">
-            Add
+            Agregar
+        </a>
+    </th>
+        <th>
+        <a class="btn btn-success" asp-page="./Consultar">
+            Consultar
         </a>
     </th>
 </tr>
@@ -27,11 +32,11 @@
                 Edit
             </a>
         </td>
-        <td>
-            <a class="btn btn-info table-btn" asp-page="./Details" asp-route-pk="@entity.Id">
+        @* <td>
+            <a class="btn btn-info table-btn" asp-page="./Consultar" asp-route-pk="@entity.Id">
                 Detail
             </a>
-        </td>
+        </td> *@
     </tr>
 }
 
