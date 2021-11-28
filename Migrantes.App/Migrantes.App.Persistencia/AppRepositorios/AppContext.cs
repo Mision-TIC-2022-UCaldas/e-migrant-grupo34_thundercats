@@ -4,11 +4,12 @@ using Migrantes.App.Dominio;
 
 namespace Migrantes.App.Persistencia{
 
-    public class AppDbContext:DbContext{
+    public class AppDbContext:DbContext{    // Ante AppContex
 
         public DbSet <Entidad> Entidades {get;set;}
         public DbSet <Servicio> Servicios {get;set;}
-        // public DbSet <Migrante> Migrantes {get;set;}
+        public DbSet <Persona> Personas {get;set;}
+        public DbSet <Migrante> Migrantes {get;set;}
 
         protected override void OnConfiguring (DbContextOptionsBuilder optionsBuilder ){
             if (!optionsBuilder.IsConfigured){
