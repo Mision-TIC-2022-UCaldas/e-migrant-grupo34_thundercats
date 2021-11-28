@@ -19,5 +19,8 @@ namespace Migrantes.App.Dominio
         public DateTime FechaInicioOferta { get; set; }
         public DateTime FechaFinOferta { get; set; }
         public EstadoServicio EstadoServicio {get; set;}
+
+        public Tipo Categoria {get; set;}
+        public bool EstaActivo {get; set;}
     }
 }

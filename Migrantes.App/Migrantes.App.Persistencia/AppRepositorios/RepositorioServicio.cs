@@ -58,6 +58,9 @@ namespace Migrantes.App.Persistencia
             entityFound.FechaInicioOferta = entity.FechaInicioOferta ;
             entityFound.FechaFinOferta = entity.FechaFinOferta ;
             entityFound.EstadoServicio = entity.EstadoServicio ;
+            entityFound.Categoria = entity.Categoria ;
+            entityFound.EstaActivo = entity.EstaActivo ;
+
 
             _appContext.SaveChanges();
             return entityFound;
