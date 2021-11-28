@@ -4,6 +4,13 @@
 }
 <h1>Listado de Todos los Servicios</h1>
 
+<form method="GET">
+    <div>
+        <label for="category">Filtrar por Categoria:</label>
+        <select asp-items="Html.GetEnumSelectList<Migrantes.App.Dominio.Tipo>()" class="form-control" name="categoria" ></select>
+    </div>
+    <input type="submit" value="Submit">
+</form>
 
 <table class="table">
 <tr>
@@ -12,8 +19,6 @@
     <th>Fecha Fin</th>
     <th>Estado</th>
     <th>Categoria</th>
-
-
 </tr>
 @foreach (var entity in Model.Entities)
 {
