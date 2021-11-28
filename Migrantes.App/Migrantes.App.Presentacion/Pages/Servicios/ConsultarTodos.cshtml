@@ -11,15 +11,20 @@
     <th>Fecha Inicio</th>
     <th>Fecha Fin</th>
     <th>Estado</th>
+    <th>Categoria</th>
+
 
 </tr>
 @foreach (var entity in Model.Entities)
 {
+    @if(entity.EstaActivo) {
     <tr>
         <td>@entity.NombreServicio</td>
+        <td>@entity.Categoria</td>
+        <td>@entity.EstadoServicio</td>
         <td>@entity.FechaInicioOferta</td>
         <td>@entity.FechaFinOferta</td>
-        <td>@entity.EstadoServicio</td>
+
         @* <td>
             <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-pk="@entity.Id">
                 Edit
@@ -31,6 +36,7 @@
             </a>
         </td> *@
     </tr>
+    }
 }
 
 </table>

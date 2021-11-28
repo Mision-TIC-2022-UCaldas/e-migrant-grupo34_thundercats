@@ -28,7 +28,13 @@ namespace Migrantes.App.Persistencia
 
         public IEnumerable<Servicio> GetAllByEntidad (int pk)                {
             return _appContext.Servicios
-                .Where(p => p.EntidadId  == pk)
+                .Where(p => p.EntidadId  == pk )
+                .ToList();
+        }
+
+        public IEnumerable<Servicio> GetAllByEntidadActivos (int pk)                {
+            return _appContext.Servicios
+                .Where(p => (p.EntidadId  == pk  && p.EstaActivo))
                 .ToList();
         }
 
@@ -58,6 +64,9 @@ namespace Migrantes.App.Persistencia
             entityFound.FechaInicioOferta = entity.FechaInicioOferta ;
             entityFound.FechaFinOferta = entity.FechaFinOferta ;
             entityFound.EstadoServicio = entity.EstadoServicio ;
+            entityFound.Categoria = entity.Categoria ;
+            entityFound.EstaActivo = entity.EstaActivo ;
+
 
             _appContext.SaveChanges();
             return entityFound;

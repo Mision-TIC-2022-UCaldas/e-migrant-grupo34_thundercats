@@ -5,11 +5,19 @@
 }
 <form method="POST">
     <input type="hidden" asp-for="Entity.Id">
+
     <div class="form-group">
         <label asp-for="Entity.NombreServicio"></label>
         <input asp-for="Entity.NombreServicio" class="form-control" required>
         <span class="text-danger" asp-validation-for="Entity.NombreServicio"></span>
     </div>
+
+    <div>
+        <label asp-for="Entity.EstaActivo"></label>
+        <input type="checkbox" asp-for="Entity.EstaActivo" class="form-control" >
+        <span class="text-danger" asp-validation-for="Entity.EstaActivo"></span>
+    </div>
+
     <div>
         <label asp-for="Entity.MaxMigrantes"></label>
         <input asp-for="Entity.MaxMigrantes" class="form-control" min="0" required>
@@ -33,8 +41,16 @@
     </div>
 
     <div>
+        <label asp-for="Entity.Categoria"></label>
+        <select asp-for="Entity.Categoria" asp-items="Html.GetEnumSelectList<Migrantes.App.Dominio.Tipo>()" class="form-control" required></select>
+        <span class="text-danger" asp-validation-for="Entity.Categoria"></span>
+    </div>
+
+
+
+    <div>
         @* <label asp-for="Entity.EntidadId"></label> *@
-        <input asp-for="Entity.EntidadId" class="form-control" required type="hidden">
+        <input  asp-for="Entity.EntidadId" class="form-control" required type="hidden" >
         <span class="text-danger" asp-validation-for="Entity.EntidadId" ></span>
     </div>
 

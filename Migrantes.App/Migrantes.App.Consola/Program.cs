@@ -19,8 +19,8 @@ namespace Migrantes.App.Consola
         {
             Console.WriteLine("Testing Entidades");
             // TestRepoEntidad();
-            // TestRepoServicio();
-            TestAddAmigos();
+            TestRepoServicio();
+            // TestAddAmigos();
             // TestAddNecesidades();
         }
 
@@ -49,8 +49,18 @@ namespace Migrantes.App.Consola
             //                 };
             // Servicio nueva = _repoServicio.Add(newEntity);
             // _repoServicio.Delete(newEntity.Id);
-            var servicios = _repoServicio.GetAllByEntidad(1);
-            Console.WriteLine(servicios);
+            var servicios = _repoServicio.GetAllByEntidad(4);
+            foreach (Servicio entity in servicios)
+            {
+                Console.WriteLine(entity.Id + " - " + entity.NombreServicio);
+            }
+            Console.WriteLine();
+
+            var serviciosActivos = _repoServicio.GetAllByEntidadActivos(4);
+            foreach (Servicio entity in serviciosActivos)
+            {
+                Console.WriteLine(entity.Id + " - " + entity.NombreServicio);
+            }
         }
         static private void TestRepoEntidad() {
             var newEntity = new Entidad
