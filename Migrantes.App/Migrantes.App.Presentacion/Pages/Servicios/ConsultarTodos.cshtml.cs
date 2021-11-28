@@ -22,10 +22,16 @@ namespace Migrantes.App.Presentacion.Pages.Servicios
         // {
         //     Entities = _repoEntity.GetAll();
         // }
-        public void OnGet()
+        public void OnGet(Migrantes.App.Dominio.Tipo? categoria)
         {
-             Entities = _repoEntity.GetAll();
-
+            if (categoria.HasValue)
+            {
+                Entities = _repoEntity.GetAllByCategoria(categoria.Value);
+            }
+            else
+            {
+                Entities = _repoEntity.GetAll();
+            }
         }
     }
 }

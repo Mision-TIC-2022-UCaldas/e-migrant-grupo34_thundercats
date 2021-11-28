@@ -26,6 +26,13 @@ namespace Migrantes.App.Persistencia
             return _appContext.Servicios;
         }
 
+        public IEnumerable<Servicio> GetAllByCategoria (Migrantes.App.Dominio.Tipo categoria) {
+
+            return _appContext.Servicios
+                .Where(p => p.Categoria  == categoria )
+                .ToList();
+        }
+
         public IEnumerable<Servicio> GetAllByEntidad (int pk)                {
             return _appContext.Servicios
                 .Where(p => p.EntidadId  == pk )
