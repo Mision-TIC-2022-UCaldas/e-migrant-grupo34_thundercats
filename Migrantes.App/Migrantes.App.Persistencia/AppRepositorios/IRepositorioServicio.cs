@@ -10,6 +10,8 @@ namespace Migrantes.App.Persistencia
 
     IEnumerable<Servicio> GetAllByEntidad (int idEntidad);
 
+    IEnumerable<Servicio> GetAllByEntidadActivos (int idEntidad);
+
     Servicio  Add (Servicio servicio );
 
     Servicio  Update (Servicio  servicio );

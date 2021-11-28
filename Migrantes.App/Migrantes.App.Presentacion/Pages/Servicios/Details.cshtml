@@ -11,6 +11,12 @@
         <label asp-for="Entity.NombreServicio"></label>
         <input asp-for="Entity.NombreServicio" class="form-control" disabled>
     </div>
+
+    <div>
+        <label asp-for="Entity.EstaActivo"></label>
+        <input type="checkbox" asp-for="Entity.EstaActivo" class="form-control" disabled>
+    </div>
+
     <div>
         <label asp-for="Entity.MaxMigrantes"></label>
         <input asp-for="Entity.MaxMigrantes" class="form-control" disabled>
@@ -28,6 +34,10 @@
         <label asp-for="Entity.EstadoServicio"></label>
         <select asp-for="Entity.EstadoServicio" asp-items="Html.GetEnumSelectList<Migrantes.App.Dominio.EstadoServicio>()"
             class="form-control" disabled></select>
+    </div>
+    <div>
+        <label asp-for="Entity.Categoria"></label>
+        <select asp-for="Entity.Categoria" asp-items="Html.GetEnumSelectList<Migrantes.App.Dominio.Tipo>()" class="form-control" disabled></select>
     </div>
     <div>
         <a asp-page="./List" asp-route-entidadId="@entidadId" class="btn btn-danger">
