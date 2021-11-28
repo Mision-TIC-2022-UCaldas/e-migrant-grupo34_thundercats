@@ -12,8 +12,8 @@
     </div>
     <div>
         <label asp-for="Entity.MaxMigrantes"></label>
-        <input asp-for="Entity.MaxMigrantes" class="form-control" min="0">
-        <span class="text-danger" asp-validation-for="Entity.MaxMigrantes" required></span>
+        <input asp-for="Entity.MaxMigrantes" class="form-control" min="0" required>
+        <span class="text-danger" asp-validation-for="Entity.MaxMigrantes" ></span>
     </div>
     <div>
         <label asp-for="Entity.FechaInicioOferta"></label>
@@ -34,8 +34,8 @@
 
     <div>
         <label asp-for="Entity.EntidadId"></label>
-        <input asp-for="Entity.EntidadId" class="form-control">
-        <span class="text-danger" asp-validation-for="Entity.EntidadId" required></span>
+        <input asp-for="Entity.EntidadId" class="form-control" required>
+        <span class="text-danger" asp-validation-for="Entity.EntidadId" ></span>
     </div>
 
     <div>

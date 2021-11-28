@@ -1,4 +1,37 @@
 ﻿@page
 @model Migrantes.App.Presentacion.Pages.Servicios.DetailsModel
 @{
+    int entidadId = Model.Entity.EntidadId;
 }
+<h2>Datos Detallados de Servicio con Codigo: @Model.Entity.Id</h2>
+
+<form method="POST">
+    <input type="hidden" asp-for="Entity.Id">
+    <div class="form-group">
+        <label asp-for="Entity.NombreServicio"></label>
+        <input asp-for="Entity.NombreServicio" class="form-control" disabled>
+    </div>
+    <div>
+        <label asp-for="Entity.MaxMigrantes"></label>
+        <input asp-for="Entity.MaxMigrantes" class="form-control" disabled>
+    </div>
+    <div>
+        <label asp-for="Entity.FechaInicioOferta"></label>
+        <input type="date" asp-for="Entity.FechaInicioOferta" class="form-control" disabled>
+    </div>
+        <div>
+        <label asp-for="Entity.FechaFinOferta"></label>
+        <input type="date" asp-for="Entity.FechaFinOferta" class="form-control" disabled>
+    </div>
+
+    <div>
+        <label asp-for="Entity.EstadoServicio"></label>
+        <select asp-for="Entity.EstadoServicio" asp-items="Html.GetEnumSelectList<Migrantes.App.Dominio.EstadoServicio>()"
+            class="form-control" disabled></select>
+    </div>
+    <div>
+        <a asp-page="./List" asp-route-entidadId="@entidadId" class="btn btn-danger">
+            Cancelar
+        </a>
+    </div>
+</form>

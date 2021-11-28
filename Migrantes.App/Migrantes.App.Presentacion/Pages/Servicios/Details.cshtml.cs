@@ -5,12 +5,29 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
+using Migrantes.App.Persistencia;
+using Migrantes.App.Dominio;
+
 namespace Migrantes.App.Presentacion.Pages.Servicios
 {
     public class DetailsModel : PageModel
     {
-        public void OnGet()
+        private readonly IRepositorioServicio _repoEntity;
+        public Servicio Entity { get; set; }
+
+        public DetailsModel(IRepositorioServicio repoEntity)
         {
+            this._repoEntity = repoEntity;
+        }
+        public IActionResult OnGet(int pk)
+        {
+            Entity = _repoEntity.Get(pk);
+            if(Entity==null)
+            {
+                return RedirectToPage("./NotFound");
+            }
+            else
+                return Page();
         }
     }
 }
