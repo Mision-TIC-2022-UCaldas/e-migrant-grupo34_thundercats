@@ -10,7 +10,7 @@ using Migrantes.App.Persistencia;
 namespace Migrantes.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20211127175940_Entidades")]
+    [Migration("20211128000224_Entidades")]
     partial class Entidades
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,8 +34,8 @@ namespace Migrantes.App.Persistencia.Migrations
                     b.Property<int?>("MigranteId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Prioridad")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Prioridad")
+                        .HasColumnType("int");
 
                     b.Property<int>("Tipo")
                         .HasColumnType("int");

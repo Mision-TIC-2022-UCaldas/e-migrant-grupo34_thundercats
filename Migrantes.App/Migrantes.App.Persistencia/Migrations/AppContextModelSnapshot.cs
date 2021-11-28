@@ -32,8 +32,8 @@ namespace Migrantes.App.Persistencia.Migrations
                     b.Property<int?>("MigranteId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Prioridad")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Prioridad")
+                        .HasColumnType("int");
 
                     b.Property<int>("Tipo")
                         .HasColumnType("int");

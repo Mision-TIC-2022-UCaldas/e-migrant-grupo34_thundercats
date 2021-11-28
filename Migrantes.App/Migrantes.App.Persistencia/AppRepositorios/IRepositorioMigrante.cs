@@ -18,6 +18,6 @@ namespace Migrantes.App.Persistencia
 
     void AddAmigosYFamiliares (string NumeroDocumento, AmigosYFamiliares AmigosYFamiliares);
 
-   // void AddNecesidades (string NumeroDocumento, Necesidades necesidades);
+   void AddNecesidades (int idMigrante, Necesidades necesidades);
     }
 }

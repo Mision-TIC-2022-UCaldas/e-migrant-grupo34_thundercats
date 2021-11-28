@@ -1,0 +1,110 @@
+﻿@page
+@using Migrantes.App.Dominio
+@model Migrantes.App.Presentacion.Pages.RegistrarNecesidadesModel
+@{
+}
+
+
+<h1> Registrar Necesidades</h1>
+
+<form method="get">
+    <div class="input-group">   
+        <label form="Name">Por favor ingrese los datos para registrar su necesidad</label>   
+ </div>
+ <br>
+        <input class="form-control" asp-for="NumeroDocumento"/>
+
+<br>
+    <div class="input-group-append">
+            <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#exampleModal">Buscar</button>
+        </div>
+
+<br>
+<br>
+   
+
+    <br>
+    <br>
+   
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Busqueda Realizada Satisfactoriamente</h5>
+                    <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Por favor registre los datos de su Necesidad y presiona boton crear para finalizar
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" >Cerrar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+</form>
+<form method="post" class="scroll">
+
+    <div class="form-group">
+        @*<label asp-for="Migrante.Id"></label>*@
+        <input asp-for="Migrante.Id" class="form-control" type="hidden">
+
+    </div>
+
+    <div class="form-group">
+       @*<label asp-for="Necesidades.Id"></label>*@
+        <input asp-for="Necesidades.Id" class="form-control" type="hidden" >
+
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Necesidades.Tipo"></label>
+        <select asp-for="Necesidades.Tipo" asp-items="Html.GetEnumSelectList<Tipo>()" class="form-control" ></select>
+
+    </div>
+     
+
+    <div class="form-group">
+        <label asp-for="Necesidades.Descripcion"></label>
+        <input asp-for="Necesidades.Descripcion" class="form-control" required="requiered">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Necesidades.Prioridad"></label>
+        <select asp-for="Necesidades.Prioridad" asp-items="Html.GetEnumSelectList<PrioridadNecesidad>()" class="form-control" ></select>
+    </div>
+
+     
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">Crear Necesidad</button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel1">Registro exitoso</h5>
+                    <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Se registro su necesidad correctamente 
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" >Cerrar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

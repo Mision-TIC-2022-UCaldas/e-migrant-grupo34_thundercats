@@ -101,5 +101,42 @@ namespace Migrantes.App.Persistencia{
             
         }
         }
+
+
+         void IRepositorioMigrante.AddNecesidades(int idMigrante, Necesidades necesidades){
+
+             var Migrante= _appContext.Migrantes.Find(idMigrante);
+            if(Migrante!=null){
+                if(Migrante.Necesidades!=null){
+                    Migrante.Necesidades.Add(necesidades);
+                }
+                else{
+                    Migrante.Necesidades = new List<Necesidades>();
+                    Migrante.Necesidades.Add(necesidades);
+                }
+            var MigranteEncontrado = _appContext.Migrantes.FirstOrDefault(p => p.Id==  Migrante.Id);
+            if (MigranteEncontrado!=null)
+            
+            {
+               /* MigranteEncontrado.Nombre=Migrante.Nombre;
+                MigranteEncontrado.Apellidos=Migrante.Apellidos;
+                MigranteEncontrado.TipoDocumento=Migrante.TipoDocumento;
+                MigranteEncontrado.NumeroDocumento=Migrante.NumeroDocumento;
+                MigranteEncontrado.PaisOrigen=Migrante.PaisOrigen;
+                MigranteEncontrado.FechaNacimiento=Migrante.FechaNacimiento;*/
+                MigranteEncontrado.Correo=Migrante.Correo;
+                MigranteEncontrado.NumeroTelefono=Migrante.NumeroTelefono;
+                MigranteEncontrado.DireccionActual=Migrante.DireccionActual;
+                MigranteEncontrado.Ciudad=Migrante.Ciudad;
+                MigranteEncontrado.SituacionLaboral=Migrante.SituacionLaboral;
+                
+
+              
+
+               _appContext.SaveChanges();
+            }
+            
+        }
+        }
     }
 }

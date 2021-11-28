@@ -45,7 +45,7 @@ namespace Migrantes.App.Persistencia.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Tipo = table.Column<int>(type: "int", nullable: false),
                     Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Prioridad = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Prioridad = table.Column<int>(type: "int", nullable: false),
                     MigranteId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
