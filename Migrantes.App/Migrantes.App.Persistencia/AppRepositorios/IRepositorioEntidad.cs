@@ -15,5 +15,7 @@ namespace Migrantes.App.Persistencia
     bool Delete (int idEntidad );
 
     Entidad  Get (int idEntidad );
+    IEnumerable<Servicio> GetServiciosEntidad(int idEntidad);
     }
+
 }

@@ -1,4 +1,47 @@
 ﻿@page
 @model Migrantes.App.Presentacion.Pages.Servicios.EditModel
 @{
+    int entidadId = Model.Entity.EntidadId;
 }
+<form method="POST">
+    <input type="hidden" asp-for="Entity.Id">
+    <div class="form-group">
+        <label asp-for="Entity.NombreServicio"></label>
+        <input asp-for="Entity.NombreServicio" class="form-control" required>
+        <span class="text-danger" asp-validation-for="Entity.NombreServicio"></span>
+    </div>
+    <div>
+        <label asp-for="Entity.MaxMigrantes"></label>
+        <input asp-for="Entity.MaxMigrantes" class="form-control" min="0">
+        <span class="text-danger" asp-validation-for="Entity.MaxMigrantes" required></span>
+    </div>
+    <div>
+        <label asp-for="Entity.FechaInicioOferta"></label>
+        <input type="date" asp-for="Entity.FechaInicioOferta" class="form-control" required min="2021-11-28">
+        <span class="text-danger" asp-validation-for="Entity.FechaInicioOferta"></span>
+    </div>
+        <div>
+        <label asp-for="Entity.FechaFinOferta"></label>
+        <input type="date" asp-for="Entity.FechaFinOferta" class="form-control" required min="2021-11-28">
+        <span class="text-danger" asp-validation-for="Entity.FechaFinOferta"></span>
+    </div>
+
+    <div>
+        <label asp-for="Entity.EstadoServicio"></label>
+        <select asp-for="Entity.EstadoServicio" asp-items="Html.GetEnumSelectList<Migrantes.App.Dominio.EstadoServicio>()" class="form-control" required></select>
+        <span class="text-danger" asp-validation-for="Entity.EstadoServicio"></span>
+    </div>
+
+    <div>
+        <label asp-for="Entity.EntidadId"></label>
+        <input asp-for="Entity.EntidadId" class="form-control">
+        <span class="text-danger" asp-validation-for="Entity.EntidadId" required></span>
+    </div>
+
+    <div>
+        <button type="submit" class="btn btn-success">Salvar</button>
+        <a asp-page="./List" asp-route-entidadId="@entidadId" class="btn btn-danger">
+            Cancelar
+        </a>
+    </div>
+</form>

@@ -11,11 +11,13 @@ namespace Migrantes.App.Presentacion.Pages.Servicios
 {
     public class ListModel : PageModel
     {
-        private readonly IRepositorioServicio _repoEntity;
+        [BindProperty]
+        public Entidad Entidad {get; set;}
+        private readonly IRepositorioEntidad _repoEntity;
 
         public IEnumerable<Servicio> Entities { get; set; }
         public int QtyItems { get; set; }
-        public ListModel(IRepositorioServicio repoEntity)
+        public ListModel(IRepositorioEntidad repoEntity)
         {
             this._repoEntity = repoEntity;
         }
@@ -23,22 +25,26 @@ namespace Migrantes.App.Presentacion.Pages.Servicios
         // {
         //     Entities = _repoEntity.GetAll();
         // }
-        public IActionResult OnGet(int? entidadId)
+        public void OnGet(int? entidadId)
         {
             if (entidadId.HasValue)
             {
-                Entities = _repoEntity.GetAllByEntidad(entidadId.Value);
+                Entidad = _repoEntity.Get(entidadId.Value);
             }
             else
             {
-                return RedirectToPage("./NotFound");
+                RedirectToPage("./NotFound");
             }
-            if (Entities == null)
+            if (Entidad == null)
             {
-                return RedirectToPage("./NotFound");
+                RedirectToPage("./NotFound");
             }
             else
-                return Page();
+            {
+
+                Entities = _repoEntity.GetServiciosEntidad(entidadId.Value);
+
+            }
 
         }
     }

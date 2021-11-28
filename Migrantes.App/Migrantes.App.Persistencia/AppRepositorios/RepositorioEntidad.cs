@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Migrantes.App.Dominio;
+using Microsoft.EntityFrameworkCore;
 
 namespace Migrantes.App.Persistencia
 {
@@ -59,6 +60,15 @@ namespace Migrantes.App.Persistencia
 
             _appContext.SaveChanges();
             return entityFound;
+        }
+
+        public IEnumerable<Servicio> GetServiciosEntidad(int idEntidad)
+        {
+            var entidad = _appContext.Entidades.Where(s => s.Id == idEntidad)
+                                               .Include(s => s.Servicios)
+                                               .FirstOrDefault();
+
+            return entidad.Servicios;
         }
     }
 }
