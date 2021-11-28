@@ -21,20 +21,22 @@ namespace Migrantes.App.Consola
         }
 
         static private void TestRepoServicio() {
-            var newEntity = new Servicio {
-                                NombreServicio = "Cualquiera",
-                                MaxMigrantes = 5,
-                                FechaInicioOferta = new DateTime(2021,11,26),
-                                FechaFinOferta = new DateTime(2021,11,26),
-                                EstadoServicio = Migrantes.App.Dominio.EstadoServicio.Activo
-                            };
-            Servicio nueva = _repoServicio.Add(newEntity);
-            _repoServicio.Delete(newEntity.Id);
+            // var newEntity = new Servicio {
+            //                     NombreServicio = "Cualquiera",
+            //                     MaxMigrantes = 5,
+            //                     FechaInicioOferta = new DateTime(2021,11,26),
+            //                     FechaFinOferta = new DateTime(2021,11,26),
+            //                     EstadoServicio = Migrantes.App.Dominio.EstadoServicio.Activo
+            //                 };
+            // Servicio nueva = _repoServicio.Add(newEntity);
+            // _repoServicio.Delete(newEntity.Id);
+            var servicios = _repoServicio.GetAllByEntidad(1);
+            Console.WriteLine(servicios);
         }
         static private void TestRepoEntidad() {
             var newEntity = new Entidad
             {
-                RazonSocial = "Coomeva",
+                RazonSocial = "Salud Total",
                 Nit = 46484784,
                 Ciudad = "Medellin",
                 Direccion = "algo",
@@ -47,9 +49,9 @@ namespace Migrantes.App.Consola
 
             var newEntityConServicios = new Entidad
             {
-                RazonSocial = "Heladeria Americana",
+                RazonSocial = "Argos",
                 Nit = 4684874,
-                Ciudad = "Barranquilla",
+                Ciudad = "Cartagena",
                 Direccion = "algo",
                 Telefono = "algo",
                 DireccionElectronica = "algo",
@@ -58,7 +60,7 @@ namespace Migrantes.App.Consola
                 TipoServicio = Migrantes.App.Dominio.TipoServicio.Educacion,
                 Servicios = new List<Servicio> {
                     new Servicio {
-                        NombreServicio = "Cualquiera",
+                        NombreServicio = "Otro mas",
                         MaxMigrantes = 5,
                         FechaInicioOferta = new DateTime(2021,11,26),
                         FechaFinOferta = new DateTime(2021,11,26),

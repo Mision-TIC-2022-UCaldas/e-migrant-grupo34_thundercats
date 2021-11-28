@@ -19,9 +19,27 @@ namespace Migrantes.App.Presentacion.Pages.Servicios
         {
             this._repoEntity = repoEntity;
         }
-        public void OnGet()
+        // public void OnGet()
+        // {
+        //     Entities = _repoEntity.GetAll();
+        // }
+        public IActionResult OnGet(int? entidadId)
         {
-            Entities = _repoEntity.GetAll();
+            if (entidadId.HasValue)
+            {
+                Entities = _repoEntity.GetAllByEntidad(entidadId.Value);
+            }
+            else
+            {
+                return RedirectToPage("./NotFound");
+            }
+            if (Entities == null)
+            {
+                return RedirectToPage("./NotFound");
+            }
+            else
+                return Page();
+
         }
     }
 }
