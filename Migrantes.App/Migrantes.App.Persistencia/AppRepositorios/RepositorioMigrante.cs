@@ -75,15 +75,16 @@ namespace Migrantes.App.Persistencia{
             }
             System.Console.WriteLine("el amigo no es nulo");
 
+            migrante.AmigosYFamiliares.Add(amigo);
+            _appContext.SaveChanges();
 
-            if(migrante.AmigosYFamiliares != null){
-                migrante.AmigosYFamiliares.Add(amigo);
-            }
-            else{
-                migrante.AmigosYFamiliares = new List<Migrante>();
-                migrante.AmigosYFamiliares.Add(amigo);
-            }
-                _appContext.SaveChanges();
+            // if(migrante.AmigosYFamiliares != null){
+            //     migrante.AmigosYFamiliares.Add(amigo);
+            // }
+            // else{
+            //     migrante.AmigosYFamiliares = new List<Migrante>();
+            //     migrante.AmigosYFamiliares.Add(amigo);
+            // }
             return true;
         }
 
