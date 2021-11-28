@@ -1,0 +1,36 @@
+@page
+@model Migrantes.App.Presentacion.Pages.Servicios.ConsultarTodosModel
+@{
+}
+<h1>Listado de Todos los Servicios</h1>
+
+
+<table class="table">
+<tr>
+    <th>Nombre Servicio</th>
+    <th>Fecha Inicio</th>
+    <th>Fecha Fin</th>
+    <th>Estado</th>
+
+</tr>
+@foreach (var entity in Model.Entities)
+{
+    <tr>
+        <td>@entity.NombreServicio</td>
+        <td>@entity.FechaInicioOferta</td>
+        <td>@entity.FechaFinOferta</td>
+        <td>@entity.EstadoServicio</td>
+        @* <td>
+            <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-pk="@entity.Id">
+                Edit
+            </a>
+        </td>
+        <td>
+            <a class="btn btn-info table-btn" asp-page="./Details" asp-route-pk="@entity.Id">
+                Detail
+            </a>
+        </td> *@
+    </tr>
+}
+
+</table>
