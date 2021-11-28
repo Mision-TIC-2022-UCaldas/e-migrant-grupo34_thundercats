@@ -1,0 +1,94 @@
+﻿@page
+@using Migrantes.App.Dominio
+@model Migrantes.App.Presentacion.Pages.Migs.ConsultarPorCedulaModel
+@{
+}
+
+<h1>Consulta de Migrantes</h1>
+
+<form method="get">
+    <div class="input-group">
+        <label form="Name">Por favor ingrese numero de documento a consultar</label>
+    </div>
+    <br>
+    <input class="form-control" asp-for="numeroDocumento"/>
+    <br>
+    <div class="input-group-append">
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    </div>
+</form>
+
+<a class="btn btn-info table-btn" asp-page="./ConsultarPorCedula" asp-route-pk="entity.Id">
+    Agregar
+</a>
+
+<form method="post" class="scroll">
+    <div class="form-group">
+        @*<label asp-for="migrante.Id"></label>*@
+        <input asp-for="migrante.Id" class="form-control" required="requiered" type="hidden">
+
+    </div>
+    <div class="form-group">
+        <label asp-for="migrante.Nombre"></label>
+        <input asp-for="migrante.Nombre" class="form-control" disabled>
+
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.Apellidos"></label>
+        <input asp-for="migrante.Apellidos" class="form-control" disabled>
+    </div>
+
+    @* <div class="form-group">
+        <label asp-for="migrante.TipoDocumento"></label>
+        <input asp-for="migrante.TipoDocumento" class="form-control" disabled>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.NumeroDocumento"></label>
+        <input asp-for="migrante.NumeroDocumento" class="form-control" disabled>
+    </div> *@
+
+    <div class="form-group">
+        <label asp-for="migrante.PaisOrigen"></label>
+        <input asp-for="migrante.PaisOrigen" class="form-control" disabled>
+    </div>
+
+    @* <div class="form-group">
+        <label asp-for="migrante.FechaNacimiento"></label>
+        <input asp-for="migrante.FechaNacimiento" class="form-control" disabled>
+    </div> *@
+
+    <div class="form-group">
+        <label asp-for="migrante.Correo"></label>
+        <input asp-for="migrante.Correo" class="form-control" disabled>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.NumeroTelefono"></label>
+        <input asp-for="migrante.NumeroTelefono" class="form-control" disabled>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.DireccionActual"></label>
+        <input asp-for="migrante.DireccionActual" class="form-control" disabled>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.Ciudad"></label>
+        <input asp-for="migrante.Ciudad" class="form-control" disabled>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.SituacionLaboral"></label>
+        <input asp-for="migrante.SituacionLaboral" class="form-control" disabled>
+    </div>
+
+
+        @* <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">Actualizar</button> *@
+
+
+    </div>
+
+
+</form>
