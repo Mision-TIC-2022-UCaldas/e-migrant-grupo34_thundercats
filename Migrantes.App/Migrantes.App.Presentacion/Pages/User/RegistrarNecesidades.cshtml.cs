@@ -6,11 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Migrantes.App.Dominio;
 using Migrantes.App.Persistencia;
+ 
 
 namespace Migrantes.App.Presentacion.Pages
 {
     public class RegistrarNecesidadesModel : PageModel
     {
+
         
         private readonly IRepositorioMigrante _repoMigrante;
         public Migrante Migrante {get;set;}
@@ -36,6 +38,7 @@ namespace Migrantes.App.Presentacion.Pages
         }
     
         public void OnPost(Migrante Migrante, Necesidades Necesidades){
+
             
           //  Migrante = _repoMigrante.GetMigrante(NumeroDocumento);
             _repoMigrante.AddNecesidades(Migrante.Id,Necesidades);
