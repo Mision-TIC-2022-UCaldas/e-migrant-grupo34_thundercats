@@ -1,0 +1,26 @@
+@page
+@model Migrantes.App.Presentacion.Pages.Novedades.ListModel
+@{
+}
+
+<h1>Tablero de ultimas Novedades</h1>
+<table class="table">
+<tr>
+    <th>Fecha</th>
+    <th>Texto</th>
+
+</tr>
+@foreach (var entity in Model.Entities)
+{
+
+    @if (entity.EstaActiva) {
+    <tr>
+        <td>@entity.FechaNovedad</td>
+        <td>@entity.TextoExplicativo</td>
+    </tr>
+
+    }
+
+}
+
+</table>

@@ -8,6 +8,7 @@
 <tr>
     <th>Id</th>
     <th>Fecha</th>
+    <th>EstaActiva</th>
     <th>
         <a class="btn btn-success" asp-page="./Edit">
             Agregar
@@ -19,6 +20,7 @@
     <tr>
         <td>@entity.Id</td>
         <td>@entity.FechaNovedad</td>
+        <td>@entity.EstaActiva</td>
         <td>
             <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-pk="@entity.Id">
                 Edit
