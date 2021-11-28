@@ -4,7 +4,7 @@ using Migrantes.App.Dominio;
 
 namespace Migrantes.App.Persistencia{
 
-    public class AppContext:DbContext{
+    public class AppDbContext:DbContext{
 
         public DbSet <Entidad> Entidades {get;set;}
         // public DbSet <Migrante> Migrantes {get;set;}

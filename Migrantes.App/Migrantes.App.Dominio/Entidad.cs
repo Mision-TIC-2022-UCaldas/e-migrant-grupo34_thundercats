@@ -38,5 +38,7 @@ namespace Migrantes.App.Dominio
         public Sector Sector {get; set;}
         public TipoServicio TipoServicio {get; set;}
 
+        public System.Collections.Generic.List<Servicio> Servicios { get; set; }
+
     }
 }

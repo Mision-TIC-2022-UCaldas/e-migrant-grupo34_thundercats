@@ -7,7 +7,7 @@ namespace Migrantes.App.Persistencia
     public class RepositorioEntidad : IRepositorioEntidad
     {
 
-        private readonly AppContext _appContext = new AppContext();
+        private readonly AppDbContext _appContext = new AppDbContext();
 
         // public RepositorioEntidad(AppContext appDbContext)
         // {
