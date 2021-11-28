@@ -5819,11 +5819,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ROSA AMPARO\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\MIgrantes.App.Persistencia\\Migrantes.App.Persistencia.csproj",
+      "projectUniqueName": "C:\\Users\\ROSA AMPARO\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Persistencia\\Migrantes.App.Persistencia.csproj",
       "projectName": "Migrantes.App.Persistencia",
-      "projectPath": "C:\\Users\\ROSA AMPARO\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\MIgrantes.App.Persistencia\\Migrantes.App.Persistencia.csproj",
+      "projectPath": "C:\\Users\\ROSA AMPARO\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Persistencia\\Migrantes.App.Persistencia.csproj",
       "packagesPath": "C:\\Users\\ROSA AMPARO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ROSA AMPARO\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\MIgrantes.App.Persistencia\\obj\\",
+      "outputPath": "C:\\Users\\ROSA AMPARO\\Documents\\GitHub\\e-migrant-grupo34_thundercats\\Migrantes.App\\Migrantes.App.Persistencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ROSA AMPARO\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -6,15 +6,14 @@ namespace Migrantes.App.Consola
 {
     class Program
     {
-        //private static IRepositorioPersona _repoPersona = new RepositorioPersona();
+        //private static IRepositorioNecesidades _repoMigrante = new RepositorioN();
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            
         }
         
-        private static void AddPersona()
-         {
-         }
+       
          
     }
 }

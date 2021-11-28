@@ -1,0 +1,126 @@
+﻿@page
+@using Migrantes.App.Dominio
+@model Migrantes.App.Presentacion.Pages.RegistrarAmigoYFamiliarModel
+@{
+}
+
+<h1> Registrar Amigos Y Familiares</h1>
+
+<form method="get">
+    <div class="input-group">   
+        <label form="Name">Por favor ingrese su numero de documento</label>   
+ </div>
+ <br>
+        <input class="form-control" asp-for="NumeroDocumento"/>
+
+<br>
+    <div class="input-group-append">
+            <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#exampleModal">Buscar</button>
+        </div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Busqueda Realizada Sactisfactoriamente</h5>
+                    <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Por favor registra los datos del Amigo o Familiar que quieres agregar y presiona boton crear
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" >Cerrar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+</form>
+<form method="post" class="scroll">
+
+    <div class="form-group">
+        <label asp-for="AmigosyFamiliares.Nombre"></label>
+        <input asp-for="AmigosyFamiliares.Nombre" class="form-control" required="requiered">
+
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AmigosyFamiliares.Apellidos"></label>
+        <input asp-for="AmigosyFamiliares.Apellidos" class="form-control" required="requiered">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AmigosyFamiliares.TipoDocumento"></label>
+        <input asp-for="AmigosyFamiliares.TipoDocumento" class="form-control" required="requiered">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AmigosyFamiliares.NumeroDocumento"></label>
+        <input asp-for="AmigosyFamiliares.NumeroDocumento" class="form-control" required="requiered">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AmigosyFamiliares.PaisOrigen"></label>
+        <input asp-for="AmigosyFamiliares.PaisOrigen" class="form-control" required="requiered">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AmigosyFamiliares.FechaNacimiento"></label>
+        <input asp-for="AmigosyFamiliares.FechaNacimiento" class="form-control" required="requiered">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AmigosyFamiliares.Correo"></label>
+        <input asp-for="AmigosyFamiliares.Correo" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AmigosyFamiliares.NumeroTelefono"></label>
+        <input asp-for="AmigosyFamiliares.NumeroTelefono" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AmigosyFamiliares.DireccionActual"></label>
+        <input asp-for="AmigosyFamiliares.DireccionActual" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AmigosyFamiliares.Ciudad"></label>
+        <input asp-for="AmigosyFamiliares.Ciudad" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AmigosyFamiliares.SituacionLaboral"></label>
+        <input asp-for="AmigosyFamiliares.SituacionLaboral" class="form-control">
+    </div>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Crear Amigo o Familiar</button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registro exitoso</h5>
+                    <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Se registro su amigo o familiar correctamente 
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" >Cerrar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

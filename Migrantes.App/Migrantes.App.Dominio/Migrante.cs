@@ -1,5 +1,5 @@
 using System;
-
+using System.Collections.Generic;
 
 namespace Migrantes.App.Dominio{
 
@@ -12,7 +12,10 @@ namespace Migrantes.App.Dominio{
         public string Ciudad {get;set;}
 
         public string SituacionLaboral {get;set;}
+
+        public List<AmigosYFamiliares> AmigosYFamiliares {get;set;}
         
+        public  List<Necesidades> Necesidades {get;set;}
 
     }
 }
