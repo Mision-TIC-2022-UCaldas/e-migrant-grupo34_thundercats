@@ -1,0 +1,66 @@
+﻿@page
+@model Migrantes.App.Presentacion.Pages.Migs.RegistrarModel
+@{
+}
+
+<h1>Creacion de migrantes</h1>
+
+<form method="post" class="scroll">
+    <div class="form-group">
+        <label asp-for="migrante.Nombre"></label>
+        <input asp-for="migrante.Nombre" class="form-control" required>
+
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.Apellidos"></label>
+        <input asp-for="migrante.Apellidos" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.TipoDocumento"></label>
+        <input asp-for="migrante.TipoDocumento" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.NumeroDocumento"></label>
+        <input asp-for="migrante.NumeroDocumento" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.PaisOrigen"></label>
+        <input asp-for="migrante.PaisOrigen" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.FechaNacimiento"></label>
+        <input type="date" asp-for="migrante.FechaNacimiento" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.Correo"></label>
+        <input asp-for="migrante.Correo" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.NumeroTelefono"></label>
+        <input asp-for="migrante.NumeroTelefono" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.DireccionActual"></label>
+        <input asp-for="migrante.DireccionActual" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.Ciudad"></label>
+        <input asp-for="migrante.Ciudad" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="migrante.SituacionLaboral"></label>
+        <input asp-for="migrante.SituacionLaboral" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Crear</button>
+
+</form>

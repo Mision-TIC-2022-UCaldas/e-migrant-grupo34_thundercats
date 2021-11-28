@@ -1,0 +1,38 @@
+﻿@page
+@model Migrantes.App.Presentacion.Pages.Migs.ListModel
+@{
+}
+<h1>Listado de Emigrantes del Sistema</h1>
+<table class="table">
+<tr>
+    @* <th>Id</th> *@
+    <th>No Doc</th>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    @* <th>Type</th> *@
+    <th>
+        <a class="btn btn-success" asp-page="./Registrar">
+            Add
+        </a>
+    </th>
+</tr>
+@foreach (var entity in Model.Entities)
+{
+    <tr>
+        <td>@entity.NumeroDocumento</td>
+        <td>@entity.Nombre</td>
+        <td>@entity.Apellidos</td>
+        <td>
+            <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-pk="@entity.Id">
+                Edit
+            </a>
+        </td>
+        <td>
+            <a class="btn btn-info table-btn" asp-page="./Details" asp-route-pk="@entity.Id">
+                Detail
+            </a>
+        </td>
+    </tr>
+}
+
+</table>

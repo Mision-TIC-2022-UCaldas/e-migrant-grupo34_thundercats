@@ -33,6 +33,7 @@ namespace Migrantes.App.Presentacion
 
             services.AddSingleton<IRepositorioEntidad,RepositorioEntidad>();
             services.AddSingleton<IRepositorioServicio,RepositorioServicio>();
+            services.AddSingleton<IRepositorioMigrante,RepositorioMigrante>();
 
             // services.AddSingleton<IRepositorioPersona,RepositorioPersona>();
         }
