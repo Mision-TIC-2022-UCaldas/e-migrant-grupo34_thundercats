@@ -11,11 +11,11 @@
     @* <th>Id</th> *@
     <th>Codigo Servicio</th>
     @* <th>Type</th> *@
-    @* <th>
-        <a class="btn btn-success" asp-page="./Edit">
+    <th>
+        <a class="btn btn-success" asp-page="./Create" asp-route-pk="@entidadId">
             Add
         </a>
-    </th> *@
+    </th>
 </tr>
 @foreach (var entity in Model.Entities)
 {

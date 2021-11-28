@@ -1,8 +1,9 @@
 ﻿@page
-@model Migrantes.App.Presentacion.Pages.Servicios.EditModel
+@model Migrantes.App.Presentacion.Pages.Servicios.CreateModel
 @{
     int entidadId = Model.Entity.EntidadId;
 }
+<h2>Crear un Servicio</h2>
 <form method="POST">
     <input type="hidden" asp-for="Entity.Id">
     <div class="form-group">
