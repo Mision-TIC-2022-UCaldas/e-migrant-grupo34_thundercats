@@ -11,6 +11,7 @@ namespace Migrantes.App.Persistencia{
         public DbSet <Persona> Personas {get;set;}
         public DbSet <Migrante> Migrantes {get;set;}
         public DbSet <Necesidades> NecesidadesDb {get;set;}
+        public DbSet <Novedad> Novedades {get;set;}
 
         protected override void OnConfiguring (DbContextOptionsBuilder optionsBuilder ){
             if (!optionsBuilder.IsConfigured){

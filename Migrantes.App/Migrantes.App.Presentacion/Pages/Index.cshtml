@@ -6,21 +6,30 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-        <div>
+<div>
+    <h1>Menus para Usuarios dependiendo del Rol</h1>
             <a asp-page="/Migs/List">
                 <h2>
-                    Migrantes
+                    Menu Migrantes
                 </h2>
             </a>
         </div>
         <div>
             <a asp-page="/Entidades/List">
                 <h2>
-                    Entidades
+                    Menu Entidades
+                </h2>
+            </a>
+        </div>
+                <div>
+            <a asp-page="/Novedades/List">
+                <h2>
+                    Menu Administracion
                 </h2>
             </a>
         </div>
         <br>
+        <h1>Menus Publicos para Migrantes</h1>
         <div>
             <a asp-page="/Servicios/ConsultarTodos">
                 <h2>
@@ -28,11 +37,11 @@
                 </h2>
             </a>
         </div>
-        @* <div>
-            <a asp-page="/Servicios/List">
+        <div>
+            <a asp-page="/Novedades/ConsultarNovedades">
                 <h2>
-                    Servicios
+                    Consultar Todas las Novedades
                 </h2>
             </a>
-        </div> *@
+        </div>
 </div>
