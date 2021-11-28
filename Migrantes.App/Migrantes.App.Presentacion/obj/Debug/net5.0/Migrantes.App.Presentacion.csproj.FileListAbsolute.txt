@@ -152,3 +152,5 @@ C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migr
 C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Presentacion\obj\Debug\net5.0\Migrantes.App.Presentacion.Views.pdb
 C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Presentacion\obj\Debug\net5.0\Migrantes.App.Presentacion.csproj.CopyComplete
 C:\Users\ejpbr\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Presentacion\obj\Debug\net5.0\Migrantes.App.Presentacion.genruntimeconfig.cache
+C:\Users\ROSA AMPARO\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Presentacion\obj\Debug\net5.0\Razor\Pages\User\RegistrarAmigoYFamiliar.cshtml.g.cs
+C:\Users\ROSA AMPARO\Documents\GitHub\e-migrant-grupo34_thundercats\Migrantes.App\Migrantes.App.Presentacion\obj\Debug\net5.0\Razor\Pages\User\RegistrarNecesidades.cshtml.g.cs
