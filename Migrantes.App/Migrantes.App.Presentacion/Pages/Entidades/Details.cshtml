@@ -1,0 +1,45 @@
+﻿@page
+@model Migrantes.App.Presentacion.Pages.Entidades.DetailsModel
+@{
+}
+<h2>Datos Detallados de Entidad con Nit: @Model.Entity.Nit</h2>
+<form>
+    <input type="hidden" asp-for="Entity.Id">
+    <div class="form-group">
+        <label asp-for="Entity.RazonSocial"></label>
+        <input asp-for="Entity.RazonSocial" class="form-control" disabled>
+    </div>
+    <div>
+        <label asp-for="Entity.Direccion"></label>
+        <input asp-for="Entity.Direccion" class="form-control" disabled>
+    </div>
+    <div>
+        <label asp-for="Entity.Ciudad"></label>
+        <input asp-for="Entity.Ciudad" class="form-control" disabled>
+    </div>
+    <div>
+        <label asp-for="Entity.Telefono"></label>
+        <input asp-for="Entity.Telefono" class="form-control" disabled>
+    </div>
+    <div>
+        <label asp-for="Entity.DireccionElectronica"></label>
+        <input asp-for="Entity.DireccionElectronica" class="form-control" disabled>
+    </div>
+    <div>
+        <label asp-for="Entity.PaginaWeb"></label>
+        <input asp-for="Entity.PaginaWeb" class="form-control" disabled>
+    </div>
+    <div>
+        <label asp-for="Entity.Sector"></label>
+        <select asp-for="Entity.Sector" asp-items="Html.GetEnumSelectList<Migrantes.App.Dominio.Sector>()" class="form-control" disabled></select>
+    </div>
+    <div>
+        <label asp-for="Entity.TipoServicio"></label>
+        <select asp-for="Entity.TipoServicio" asp-items="Html.GetEnumSelectList<Migrantes.App.Dominio.TipoServicio>()" class="form-control" disabled></select>
+    </div>
+    <div>
+        <a asp-page="./List" class="btn btn-danger">
+            Regresar
+        </a>
+    </div>
+</form>
