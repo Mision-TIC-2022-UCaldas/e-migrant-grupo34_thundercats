@@ -15,11 +15,11 @@
             Agregar
         </a>
     </th>
-    <th>
+    @* <th>
         <a class="btn btn-success" asp-page="./Consultar">
             Consultar
         </a>
-    </th>
+    </th> *@
     <th>
         <a class="btn btn-success" asp-page="./RegistrarNecesidades">
             Registrar Necesidades
@@ -37,11 +37,11 @@
                 Edit
             </a>
         </td>
-        @* <td>
-            <a class="btn btn-info table-btn" asp-page="./Consultar" asp-route-pk="@entity.Id">
-                Detail
+        <td>
+            <a class="btn btn-info table-btn" asp-page="./ConsultarPorCedula" asp-route-pk="@entity.Id">
+                Agregar Amigos
             </a>
-        </td> *@
+        </td>
     </tr>
 }
 

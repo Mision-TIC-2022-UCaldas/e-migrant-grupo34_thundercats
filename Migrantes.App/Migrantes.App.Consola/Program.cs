@@ -10,14 +10,33 @@ namespace Migrantes.App.Consola
 
         private static IRepositorioEntidad _repoEntidad = new RepositorioEntidad();
         private static IRepositorioServicio _repoServicio = new RepositorioServicio();
+        private static IRepositorioMigrante _repoMigrante = new RepositorioMigrante();
+        private static IRepositorioNecesidades _repoNecesidades = new RepositorioNecesidades();
+
+
 
         static void Main(string[] args)
         {
             Console.WriteLine("Testing Entidades");
-            TestRepoEntidad();
+            // TestRepoEntidad();
             // TestRepoServicio();
+            TestAddAmigos();
+            // TestAddNecesidades();
+        }
 
+        static private void TestAddNecesidades() {
+            var necesidades = new Necesidades {
+                Tipo = Migrantes.App.Dominio.Tipo.AlojamientoPermanente,
+                Descripcion = "Dolor",
+                Prioridad = Migrantes.App.Dominio.PrioridadNecesidad.Alta
+            };
 
+           Console.WriteLine(_repoMigrante.AddNecesidades(2, necesidades));
+        }
+        static private void TestAddAmigos() {
+            var migrante = _repoMigrante.GetMigrante(83938938);
+            bool result = _repoMigrante.AddAmigosYFamiliares(38392839, migrante);
+            Console.WriteLine(result);
         }
 
         static private void TestRepoServicio() {
