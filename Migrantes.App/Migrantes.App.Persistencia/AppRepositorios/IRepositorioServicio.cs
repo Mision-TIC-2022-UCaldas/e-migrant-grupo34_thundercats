@@ -8,6 +8,8 @@ namespace Migrantes.App.Persistencia
 
     IEnumerable<Servicio> GetAll ();
 
+    IEnumerable<Servicio> GetAllByEntidad (int idEntidad);
+
     Servicio  Add (Servicio servicio );
 
     Servicio  Update (Servicio  servicio );
@@ -15,5 +17,7 @@ namespace Migrantes.App.Persistencia
     bool Delete (int idServicio );
 
     Servicio  Get (int idServicio );
+
+
     }
 }

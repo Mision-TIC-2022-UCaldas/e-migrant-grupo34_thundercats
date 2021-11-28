@@ -11,6 +11,9 @@ namespace Migrantes.App.Dominio
     public class Servicio
     {
         public int Id {get;set;}
+
+        public int EntidadId {get;set;}
+
         public string NombreServicio {get;set;}
         public int MaxMigrantes {get;set;}
         public DateTime FechaInicioOferta { get; set; }

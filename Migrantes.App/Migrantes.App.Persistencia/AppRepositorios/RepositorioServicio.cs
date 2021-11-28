@@ -26,6 +26,12 @@ namespace Migrantes.App.Persistencia
             return _appContext.Servicios;
         }
 
+        public IEnumerable<Servicio> GetAllByEntidad (int pk)                {
+            return _appContext.Servicios
+                .Where(p => p.EntidadId  == pk)
+                .ToList();
+        }
+
         public Servicio Get(int pk)
         {
             return _appContext.Servicios.FirstOrDefault(p => p.Id == pk);

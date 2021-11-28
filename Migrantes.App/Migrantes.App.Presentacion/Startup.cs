@@ -32,6 +32,8 @@ namespace Migrantes.App.Presentacion
             services.AddControllersWithViews();
 
             services.AddSingleton<IRepositorioEntidad,RepositorioEntidad>();
+            services.AddSingleton<IRepositorioServicio,RepositorioServicio>();
+
             // services.AddSingleton<IRepositorioPersona,RepositorioPersona>();
         }
 

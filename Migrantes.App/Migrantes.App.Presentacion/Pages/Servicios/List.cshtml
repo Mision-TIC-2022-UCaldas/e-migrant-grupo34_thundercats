@@ -2,3 +2,35 @@
 @model Migrantes.App.Presentacion.Pages.Servicios.ListModel
 @{
 }
+<h1>Listado de Servicios asociadas a la Entidad</h1>
+
+
+<table class="table">
+<tr>
+    @* <th>Id</th> *@
+    <th>Nombre Servicio</th>
+    @* <th>Type</th> *@
+    <th>
+        <a class="btn btn-success" asp-page="./Edit">
+            Add
+        </a>
+    </th>
+</tr>
+@foreach (var entity in Model.Entities)
+{
+    <tr>
+        <td>@entity.NombreServicio</td>
+        <td>
+            <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-pk="@entity.Id">
+                Edit
+            </a>
+        </td>
+        <td>
+            <a class="btn btn-info table-btn" asp-page="./Details" asp-route-pk="@entity.Id">
+                Detail
+            </a>
+        </td>
+    </tr>
+}
+
+</table>
