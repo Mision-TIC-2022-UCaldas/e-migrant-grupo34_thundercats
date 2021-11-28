@@ -3,12 +3,17 @@
 @{
 }
 
-<h1>Listado de Entidades</h1>
+<h1>Listado de Entidades asociadas a su usuario</h1>
 <table class="table">
-@foreach (var entidad in Model.Entidades)
+@foreach (var entity in Model.Entities)
 {
     <tr>
-        <td>@entidad.Ciudad</td>
+        <td>@entity.RazonSocial</td>
+        <td>
+            <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-pk="@entity.Id">
+                Edit
+            </a>
+        </td>
     </tr>
 }
 

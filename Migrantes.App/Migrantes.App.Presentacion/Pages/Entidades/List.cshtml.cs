@@ -14,7 +14,7 @@ namespace Migrantes.App.Presentacion.Pages.Entidades
     {
         private readonly IRepositorioEntidad _repoEntidad;
 
-        public IEnumerable<Entidad> Entidades { get; set; }
+        public IEnumerable<Entidad> Entities { get; set; }
 
         public ListModel(IRepositorioEntidad repoEntidad)
         {
@@ -22,7 +22,7 @@ namespace Migrantes.App.Presentacion.Pages.Entidades
         }
         public void OnGet()
         {
-            Entidades = _repoEntidad.GetAll();
+            Entities = _repoEntidad.GetAll();
         }
     }
 }

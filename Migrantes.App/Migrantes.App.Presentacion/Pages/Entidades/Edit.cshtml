@@ -2,3 +2,62 @@
 @model Migrantes.App.Presentacion.Pages.Entidades.EditModel
 @{
 }
+<h2>Por favor ingrese la informacion:</h2>
+<form method="POST">
+    <input type="hidden" asp-for="Entity.Id">
+    <div class="form-group">
+        <label asp-for="Entity.RazonSocial"></label>
+        <input asp-for="Entity.RazonSocial" class="form-control" required>
+        <span class="text-danger" asp-validation-for="Entity.RazonSocial"></span>
+    </div>
+    <div>
+        <label asp-for="Entity.Nit"></label>
+        <input asp-for="Entity.Nit" class="form-control">
+        <span class="text-danger" asp-validation-for="Entity.Nit" required></span>
+    </div>
+    <div>
+        <label asp-for="Entity.Direccion"></label>
+        <input asp-for="Entity.Direccion" class="form-control" required>
+        <span class="text-danger" asp-validation-for="Entity.Direccion"></span>
+    </div>
+    <div>
+        <label asp-for="Entity.Ciudad"></label>
+        <input asp-for="Entity.Ciudad" class="form-control" required>
+        <span class="text-danger" asp-validation-for="Entity.Ciudad"></span>
+    </div>
+    <div>
+        <label asp-for="Entity.Telefono"></label>
+        <input asp-for="Entity.Telefono" class="form-control" required>
+        <span class="text-danger" asp-validation-for="Entity.Telefono"></span>
+    </div>
+    <div>
+        <label asp-for="Entity.DireccionElectronica"></label>
+        <input asp-for="Entity.DireccionElectronica" class="form-control">
+        <span class="text-danger" asp-validation-for="Entity.DireccionElectronica"></span>
+    </div>
+    <div>
+        <label asp-for="Entity.PaginaWeb"></label>
+        <input asp-for="Entity.PaginaWeb" class="form-control">
+        <span class="text-danger" asp-validation-for="Entity.PaginaWeb"></span>
+    </div>
+    <div>
+        <label asp-for="Entity.Sector"></label>
+        <select asp-for="Entity.Sector" asp-items="Html.GetEnumSelectList<Migrantes.App.Dominio.Sector>()" class="form-control" required></select>
+        <span class="text-danger" asp-validation-for="Entity.Sector"></span>
+    </div>
+    <div>
+        <label asp-for="Entity.TipoServicio"></label>
+        <select asp-for="Entity.TipoServicio" asp-items="Html.GetEnumSelectList<Migrantes.App.Dominio.TipoServicio>()" class="form-control" required></select>
+        <span class="text-danger" asp-validation-for="Entity.TipoServicio"></span>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-success">Salvar</button>
+        <a asp-page="./List" class="btn btn-danger">
+            Cancelar
+        </a>
+    </div>
+</form>
+
+<br>
+
+<a asp-page="./List" class="btn-default">Regresar</a>

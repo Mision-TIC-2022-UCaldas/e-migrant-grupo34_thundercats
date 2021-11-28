@@ -47,7 +47,15 @@ namespace Migrantes.App.Persistencia
             if (entityFound == null)
                 return null;
 
-            entityFound.Ciudad = entidad.Ciudad;
+            entityFound.RazonSocial = entidad.RazonSocial ;
+            entityFound.Nit = entidad.Nit ;
+            entityFound.Ciudad = entidad.Ciudad ;
+            entityFound.Direccion = entidad.Direccion ;
+            entityFound.Telefono = entidad.Telefono ;
+            entityFound.DireccionElectronica = entidad.DireccionElectronica ;
+            entityFound.PaginaWeb = entidad.PaginaWeb ;
+            entityFound.Sector = entidad.Sector ;
+            entityFound.TipoServicio = entidad.TipoServicio ;
 
             _appContext.SaveChanges();
             return entityFound;
