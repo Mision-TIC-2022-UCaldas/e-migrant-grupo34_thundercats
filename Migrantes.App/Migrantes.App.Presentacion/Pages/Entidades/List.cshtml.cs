@@ -14,15 +14,27 @@ namespace Migrantes.App.Presentacion.Pages.Entidades
     {
         private readonly IRepositorioEntidad _repoEntidad;
 
+        public string Ciudad {get;set;}
+        public int Nit {get;set;}
+
+        public Migrante migrante {get; set;}
+        
         public IEnumerable<Entidad> Entities { get; set; }
+        public IEnumerable<Entidad> Entities1 { get; set; }
 
         public ListModel(IRepositorioEntidad repoEntidad)
         {
             this._repoEntidad = repoEntidad;
         }
-        public void OnGet()
+        public void OnGet(string Ciudad, int Nit)
         {
-            Entities = _repoEntidad.GetAll();
+
+
+            Entities = _repoEntidad.GetAllByCiudad(Ciudad);
+
+            Entities1 = _repoEntidad.GetAllByNit(Nit);
+
+
+        }
         }
     }
-}

@@ -8,7 +8,7 @@ namespace Migrantes.App.Consola
     class Program
     {
 
-        private static IRepositorioEntidad _repoEntidad = new RepositorioEntidad();
+        //private static IRepositorioEntidad _repoEntidad = new RepositorioEntidad();
         private static IRepositorioServicio _repoServicio = new RepositorioServicio();
         private static IRepositorioMigrante _repoMigrante = new RepositorioMigrante();
         private static IRepositorioNecesidades _repoNecesidades = new RepositorioNecesidades();

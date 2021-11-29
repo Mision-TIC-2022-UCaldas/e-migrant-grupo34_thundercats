@@ -27,6 +27,18 @@ namespace Migrantes.App.Persistencia
             return _appContext.Entidades;
         }
 
+           public IEnumerable<Entidad> GetAllByCiudad(string ciudad) {
+
+            return _appContext.Entidades
+                .Where(p => p.Ciudad  == ciudad )
+                .ToList();
+        }
+         public IEnumerable<Entidad> GetAllByNit(int nit) {
+
+            return _appContext.Entidades
+                .Where(p => p.Nit  == nit )
+                .ToList();
+        }
         public Entidad Get(int pk)
         {
             return _appContext.Entidades.FirstOrDefault(p => p.Id == pk);
