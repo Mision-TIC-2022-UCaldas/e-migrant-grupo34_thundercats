@@ -13,7 +13,7 @@ namespace Migrantes.App.Dominio{
 
         public string SituacionLaboral {get;set;}
 
-        public List<Migrante> AmigosYFamiliares {get;set;}
+        public List<Amigosyfamiliares> AmigosYFamiliares {get;set;}
 
         public  List<Necesidades> Necesidades {get;set;}
 

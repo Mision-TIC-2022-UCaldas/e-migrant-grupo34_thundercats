@@ -13,38 +13,39 @@ namespace Migrantes.App.Presentacion.Pages.Migs
     {
 
         private readonly IRepositorioMigrante _repoMigrante;
-        public string numeroDocumento { get; set; }
+        private readonly IRepositorioAmigosyfamiliares _repoAmigosyfamiliares;
+        public int numeroDocumento { get; set; }
+
+        public int numeroDocumento1 { get; set; }
+
+        public Amigosyfamiliares amigosyfamiliares {get; set;}
 
         public Migrante migrante { get; set; }
         public Migrante migrante1 { get; set; }
         // [BindProperty(SupportsGet= true)]
         // public string numeroDocumento{get;set;} = string.Empty;
 
-        public ConsultarPorCedulaModel(IRepositorioMigrante _repoMigrante)
+        public ConsultarPorCedulaModel(IRepositorioMigrante _repoMigrante, IRepositorioAmigosyfamiliares _repoAmigosyfamiliares)
         {
             this._repoMigrante = _repoMigrante;
+            this._repoAmigosyfamiliares=_repoAmigosyfamiliares;
         }
-        public void OnGet(int numeroDocumento)
+        public void OnGet(int numeroDocumento,int numeroDocumento1)
         {
             migrante = _repoMigrante.GetMigrante(numeroDocumento);
+            migrante1 = _repoMigrante.GetMigrante(numeroDocumento1);
+            
+            amigosyfamiliares= new Amigosyfamiliares();
 
             Console.WriteLine(numeroDocumento);
-            if (migrante == null)
-            {
-                Console.WriteLine(numeroDocumento);
-            }
-
-            else
-            {
-                Console.WriteLine(numeroDocumento);
-
-            }
+            Console.WriteLine(numeroDocumento1);
         }
-        public IActionResult OnPost(Migrante migrante)
-        {
-            _repoMigrante.UpdateMigrante(migrante);
-            return RedirectToPage("");
+
+        public void OnPost(Amigosyfamiliares amigosyfamiliares,Migrante migrante, Migrante migrante1){
+        _repoMigrante.AddAmigosyfamiliares1(migrante.Id,migrante1.Id,amigosyfamiliares);
 
         }
+
+
     }
 }

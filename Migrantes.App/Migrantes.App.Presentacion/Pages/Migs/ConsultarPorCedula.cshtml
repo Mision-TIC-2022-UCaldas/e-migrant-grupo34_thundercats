@@ -8,35 +8,49 @@
 
 <form method="get">
     <div class="input-group">
+        <label form="Name">Por favor ingrese numero de documento</label>
+    </div>
+    <br>
+    <input class="form-control" asp-for="numeroDocumento" required/>
+    <br>
+    <div class="input-group-append">
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    </div>
+    <div class="input-group">
         <label form="Name">Por favor ingrese numero de documento a consultar</label>
     </div>
     <br>
-    <input class="form-control" asp-for="numeroDocumento"/>
+    <input class="form-control" asp-for="numeroDocumento1" required/>
     <br>
     <div class="input-group-append">
         <button type="submit" class="btn btn-primary">Buscar</button>
     </div>
 </form>
 
-<a class="btn btn-info table-btn" asp-page="./ConsultarPorCedula" asp-route-pk="entity.Id">
-    Agregar
-</a>
+
 
 <form method="post" class="scroll">
     <div class="form-group">
         @*<label asp-for="migrante.Id"></label>*@
         <input asp-for="migrante.Id" class="form-control" required="requiered" type="hidden">
 
+
     </div>
     <div class="form-group">
-        <label asp-for="migrante.Nombre"></label>
-        <input asp-for="migrante.Nombre" class="form-control" disabled>
+        @*<label asp-for="migrante1.Id"></label>*@
+        <input asp-for="migrante1.Id" class="form-control" required="requiered" type="hidden" >
+
+
+    </div>
+    <div class="form-group">
+        <label asp-for="migrante1.Nombre"></label>
+        <input asp-for="migrante1.Nombre" class="form-control" disabled>
 
     </div>
 
     <div class="form-group">
-        <label asp-for="migrante.Apellidos"></label>
-        <input asp-for="migrante.Apellidos" class="form-control" disabled>
+        <label asp-for="migrante1.Apellidos"></label>
+        <input asp-for="migrante1.Apellidos" class="form-control" disabled>
     </div>
 
     @* <div class="form-group">
@@ -50,8 +64,8 @@
     </div> *@
 
     <div class="form-group">
-        <label asp-for="migrante.PaisOrigen"></label>
-        <input asp-for="migrante.PaisOrigen" class="form-control" disabled>
+        <label asp-for="migrante1.PaisOrigen"></label>
+        <input asp-for="migrante1.PaisOrigen" class="form-control" disabled>
     </div>
 
     @* <div class="form-group">
@@ -60,35 +74,45 @@
     </div> *@
 
     <div class="form-group">
-        <label asp-for="migrante.Correo"></label>
-        <input asp-for="migrante.Correo" class="form-control" disabled>
+        <label asp-for="migrante1.Correo"></label>
+        <input asp-for="migrante1.Correo" class="form-control" disabled>
     </div>
 
     <div class="form-group">
-        <label asp-for="migrante.NumeroTelefono"></label>
-        <input asp-for="migrante.NumeroTelefono" class="form-control" disabled>
+        <label asp-for="migrante1.NumeroTelefono"></label>
+        <input asp-for="migrante1.NumeroTelefono" class="form-control" disabled>
     </div>
 
     <div class="form-group">
-        <label asp-for="migrante.DireccionActual"></label>
-        <input asp-for="migrante.DireccionActual" class="form-control" disabled>
+        <label asp-for="migrante1.DireccionActual"></label>
+        <input asp-for="migrante1.DireccionActual" class="form-control" disabled>
     </div>
 
     <div class="form-group">
-        <label asp-for="migrante.Ciudad"></label>
-        <input asp-for="migrante.Ciudad" class="form-control" disabled>
+        <label asp-for="migrante1.Ciudad"></label>
+        <input asp-for="migrante1.Ciudad" class="form-control" disabled>
     </div>
 
     <div class="form-group">
-        <label asp-for="migrante.SituacionLaboral"></label>
-        <input asp-for="migrante.SituacionLaboral" class="form-control" disabled>
+        <label asp-for="migrante1.SituacionLaboral"></label>
+        <input asp-for="migrante1.SituacionLaboral" class="form-control" disabled>
+    </div>
+
+     <div class="form-group">
+        <label asp-for="amigosyfamiliares.Relacion"></label>
+        <input asp-for="amigosyfamiliares.Relacion" class="form-control" required >
     </div>
 
 
         @* <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">Actualizar</button> *@
 
-
+    <div class="input-group-append">
+        <button type="submit" class="btn btn-primary">Añadir Amigo</button>
     </div>
 
+    </div>
+    <br>
+
+  
 
 </form>
