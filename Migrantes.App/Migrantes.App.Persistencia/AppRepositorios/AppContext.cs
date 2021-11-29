@@ -14,6 +14,7 @@ namespace Migrantes.App.Persistencia{
         public DbSet <Amigosyfamiliares> Amigosyfamiliares1 {get;set;}
         public DbSet <CalificacionServicios>  CalificacionesServicios {get;set;}
         public DbSet <CalificacionApp> CalificacionApp {get;set;}
+        public DbSet <Emergencias> Emergencias {get;set;}
 
         
         public DbSet <Novedad> Novedades {get;set;}

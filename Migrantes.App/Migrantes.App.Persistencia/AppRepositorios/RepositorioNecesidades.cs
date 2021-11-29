@@ -40,6 +40,7 @@ namespace Migrantes.App.Persistencia{
             return _appContext.NecesidadesDb.FirstOrDefault(p =>p.Id==idNecesidades);
         }
 
+
         public Necesidades UpdateNecesidades(Necesidades Necesidades)
         {
             var NecesidadesEncontrado=_appContext.NecesidadesDb.FirstOrDefault(p =>p.Id==Necesidades.Id);
@@ -49,7 +50,6 @@ namespace Migrantes.App.Persistencia{
                 NecesidadesEncontrado.Tipo=Necesidades.Tipo;
                 NecesidadesEncontrado.Descripcion=Necesidades.Descripcion;
                 NecesidadesEncontrado.Prioridad=Necesidades.Prioridad;
-
 
                 _appContext.SaveChanges() ;
 

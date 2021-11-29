@@ -16,10 +16,18 @@ namespace Migrantes.App.Dominio{
         Media,
         Alta
     }
+    public enum Validacion{ // Antes en archivo aparte
+        Atendido,
+        No_Atendido,
+    
+    }
     public class Necesidades {
         public int Id {get;set;}
         public Tipo Tipo {get;set;}
         public string Descripcion {get;set;}
         public PrioridadNecesidad Prioridad {get;set;}
+        public Validacion Validacion {get;set;}
+
+
     }
 }

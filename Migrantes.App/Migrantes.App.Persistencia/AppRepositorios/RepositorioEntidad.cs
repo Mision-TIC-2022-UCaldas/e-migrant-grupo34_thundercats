@@ -39,6 +39,7 @@ namespace Migrantes.App.Persistencia
                 .Where(p => p.Nit  == nit )
                 .ToList();
         }
+        
         public Entidad Get(int pk)
         {
             return _appContext.Entidades.FirstOrDefault(p => p.Id == pk);
