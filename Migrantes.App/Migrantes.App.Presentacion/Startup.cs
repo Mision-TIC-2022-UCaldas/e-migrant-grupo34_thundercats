@@ -38,6 +38,8 @@ namespace Migrantes.App.Presentacion
             services.AddSingleton<IRepositorioNovedad,RepositorioNovedad>();
             services.AddSingleton<IRepositorioCalificacionApp,RepositorioCalificacionApp>();
             services.AddSingleton<IRepositorioCalificacionServicios,RepositorioCalificacionServicios>();
+            services.AddSingleton<IRepositorioNecesidades,RepositorioNecesidades>();
+
 
 
             // services.AddSingleton<IRepositorioPersona,RepositorioPersona>();

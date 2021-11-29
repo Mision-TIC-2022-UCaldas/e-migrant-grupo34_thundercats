@@ -1,0 +1,27 @@
+﻿@page
+@model Migrantes.App.Presentacion.Pages.Migs.ListaNecesidadesModel
+@{
+}
+<h1>Listado de Emigrantes del Sistema</h1>
+
+<table class="table">
+<tr>
+    @* <th>Id</th> *@
+    <th>Tipo</th>
+    <th>Prioridad</th>
+    <th>Descripcion</th>
+    @* <th>Type</th> *@
+    <th>
+    </th>
+</tr>
+@foreach (var nece in Model.necesidades)
+{
+    <tr>
+        <td>@nece.Tipo</td>
+        <td>@nece.Prioridad</td>
+        <td>@nece.Descripcion</td>
+
+    </tr>
+}
+
+</table>
