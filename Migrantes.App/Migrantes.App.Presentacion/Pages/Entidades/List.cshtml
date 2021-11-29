@@ -41,11 +41,8 @@
       <tr>
           <td>@entity.Ciudad</td>
         <td>@entity.RazonSocial</td>
-        <td>
-            <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-pk="@entity.Id">
-                Edit
-            </a>
-        </td>
+        <td>@entity.TipoServicio</td>
+
         <td>
             <a class="btn btn-info table-btn" asp-page="./Details" asp-route-pk="@entity.Id">
                 Detail
@@ -62,11 +59,8 @@
      <tr>
           <td>@entity1.Ciudad</td>
         <td>@entity1.RazonSocial</td>
-        <td>
-            <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-pk="@entity1.Id">
-                Edit
-            </a>
-        </td>
+        <td>@entity1.TipoServicio</td>
+   
         <td>
             <a class="btn btn-info table-btn" asp-page="./Details" asp-route-pk="@entity1.Id">
                 Detail
