@@ -18,6 +18,7 @@ namespace Migrantes.App.Persistencia{
 
 
         public DbSet <Novedad> Novedades {get;set;}
+        public DbSet <Usuario> Usuarios {get;set;}
 
         protected override void OnConfiguring (DbContextOptionsBuilder optionsBuilder ){
             if (!optionsBuilder.IsConfigured){
