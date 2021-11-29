@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Persistencia.Migrations
 {
-    public partial class Migrantes : Migration
+    public partial class Consolidado : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,11 +13,55 @@ namespace Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Relacion = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Relacion = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    idMigranteAmigo = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Amigosyfamiliares1", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "CalificacionApp",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ValorCalificacion = table.Column<int>(type: "int", nullable: false),
+                    numeroDocumentoMigrante = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CalificacionApp", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "CalificacionesServicios",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ValorCalificacion = table.Column<int>(type: "int", nullable: false),
+                    TipoServicio = table.Column<int>(type: "int", nullable: false),
+                    numeroDocumentoMigrante = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CalificacionesServicios", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Emergencias",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TipoEmergencia = table.Column<int>(type: "int", nullable: false),
+                    Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Emergencias", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -39,6 +83,22 @@ namespace Persistencia.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Entidades", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Novedades",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    DiasActiva = table.Column<int>(type: "int", nullable: false),
+                    FechaNovedad = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    TextoExplicativo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    EstaActiva = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Novedades", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -76,7 +136,9 @@ namespace Persistencia.Migrations
                     MaxMigrantes = table.Column<int>(type: "int", nullable: false),
                     FechaInicioOferta = table.Column<DateTime>(type: "datetime2", nullable: false),
                     FechaFinOferta = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    EstadoServicio = table.Column<int>(type: "int", nullable: false)
+                    EstadoServicio = table.Column<int>(type: "int", nullable: false),
+                    Categoria = table.Column<int>(type: "int", nullable: false),
+                    EstaActivo = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -122,6 +184,7 @@ namespace Persistencia.Migrations
                     Tipo = table.Column<int>(type: "int", nullable: false),
                     Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Prioridad = table.Column<int>(type: "int", nullable: false),
+                    Validacion = table.Column<int>(type: "int", nullable: false),
                     MigranteId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -157,7 +220,19 @@ namespace Persistencia.Migrations
                 name: "AmigosyfamiliaresMigrante");
 
             migrationBuilder.DropTable(
+                name: "CalificacionApp");
+
+            migrationBuilder.DropTable(
+                name: "CalificacionesServicios");
+
+            migrationBuilder.DropTable(
+                name: "Emergencias");
+
+            migrationBuilder.DropTable(
                 name: "NecesidadesDb");
+
+            migrationBuilder.DropTable(
+                name: "Novedades");
 
             migrationBuilder.DropTable(
                 name: "Servicios");
