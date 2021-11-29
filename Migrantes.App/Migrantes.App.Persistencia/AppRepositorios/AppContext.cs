@@ -16,12 +16,13 @@ namespace Migrantes.App.Persistencia{
         public DbSet <CalificacionApp> CalificacionApp {get;set;}
         public DbSet <Emergencias> Emergencias {get;set;}
 
-        
+
         public DbSet <Novedad> Novedades {get;set;}
 
         protected override void OnConfiguring (DbContextOptionsBuilder optionsBuilder ){
             if (!optionsBuilder.IsConfigured){
-                optionsBuilder.UseSqlServer("Data Source =(localdb)\\MSSQLLocalDB; Initial Catalog=Thundercats");
+                // optionsBuilder.UseSqlServer("Data Source =(localdb)\\MSSQLLocalDB; Initial Catalog=Thundercats"); // La usan ustedes
+                optionsBuilder.UseSqlServer(@"Data Source=localhost;Initial Catalog = Thundercats;Integrated Security = True"); // La uso yo
             }
         }
 
