@@ -1,0 +1,24 @@
+@page
+@model Migrantes.App.Presentacion.Pages.Servicios.ListActivosModel
+@{
+    @* int entidadId = Model.Entidad.Id; *@
+}
+<h1>Listado de Servicios Activos</h1>
+
+
+<table class="table">
+<tr>
+    <th>Codigo Servicio</th>
+</tr>
+@foreach (var entity in Model.Entities)
+{
+    <tr>
+        <td>@entity.NombreServicio</td>
+        <td>@entity.Categoria</td>
+        <td>@entity.EstadoServicio</td>
+        <td>@entity.FechaInicioOferta</td>
+        <td>@entity.FechaFinOferta</td>
+    </tr>
+}
+
+</table>

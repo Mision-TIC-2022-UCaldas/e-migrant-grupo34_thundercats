@@ -14,6 +14,7 @@ namespace Migrantes.App.Persistencia{
         public DbSet <Amigosyfamiliares> Amigosyfamiliares1 {get;set;}
 
         
+        public DbSet <Novedad> Novedades {get;set;}
 
         protected override void OnConfiguring (DbContextOptionsBuilder optionsBuilder ){
             if (!optionsBuilder.IsConfigured){

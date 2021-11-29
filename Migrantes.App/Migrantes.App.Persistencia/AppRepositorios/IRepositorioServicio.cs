@@ -8,7 +8,11 @@ namespace Migrantes.App.Persistencia
 
     IEnumerable<Servicio> GetAll ();
 
+    IEnumerable<Servicio> GetAllByCategoria (Migrantes.App.Dominio.Tipo categoria);
+
     IEnumerable<Servicio> GetAllByEntidad (int idEntidad);
+
+    IEnumerable<Servicio> GetAllByEntidadActivos (int idEntidad);
 
     Servicio  Add (Servicio servicio );
 

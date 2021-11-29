@@ -26,9 +26,22 @@ namespace Migrantes.App.Persistencia
             return _appContext.Servicios;
         }
 
+        public IEnumerable<Servicio> GetAllByCategoria (Migrantes.App.Dominio.Tipo categoria) {
+
+            return _appContext.Servicios
+                .Where(p => p.Categoria  == categoria )
+                .ToList();
+        }
+
         public IEnumerable<Servicio> GetAllByEntidad (int pk)                {
             return _appContext.Servicios
-                .Where(p => p.EntidadId  == pk)
+                .Where(p => p.EntidadId  == pk )
+                .ToList();
+        }
+
+        public IEnumerable<Servicio> GetAllByEntidadActivos (int pk)                {
+            return _appContext.Servicios
+                .Where(p => (p.EntidadId  == pk  && p.EstaActivo))
                 .ToList();
         }
 
@@ -58,6 +71,9 @@ namespace Migrantes.App.Persistencia
             entityFound.FechaInicioOferta = entity.FechaInicioOferta ;
             entityFound.FechaFinOferta = entity.FechaFinOferta ;
             entityFound.EstadoServicio = entity.EstadoServicio ;
+            entityFound.Categoria = entity.Categoria ;
+            entityFound.EstaActivo = entity.EstaActivo ;
+
 
             _appContext.SaveChanges();
             return entityFound;

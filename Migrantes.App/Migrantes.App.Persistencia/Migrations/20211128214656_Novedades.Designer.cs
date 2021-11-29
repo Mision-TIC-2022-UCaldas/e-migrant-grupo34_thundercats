@@ -3,54 +3,23 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Migrantes.App.Persistencia;
 
 namespace Persistencia.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211128214656_Novedades")]
+    partial class Novedades
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.4")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("AmigosyfamiliaresMigrante", b =>
-                {
-                    b.Property<int>("AmigosYFamiliaresId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MigranteId")
-                        .HasColumnType("int");
-
-                    b.HasKey("AmigosYFamiliaresId", "MigranteId");
-
-                    b.HasIndex("MigranteId");
-
-                    b.ToTable("AmigosyfamiliaresMigrante");
-                });
-
-            modelBuilder.Entity("Migrantes.App.Dominio.Amigosyfamiliares", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Relacion")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("idMigranteAmigo")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Amigosyfamiliares1");
-                });
 
             modelBuilder.Entity("Migrantes.App.Dominio.Entidad", b =>
                 {
@@ -228,28 +197,18 @@ namespace Persistencia.Migrations
                     b.Property<string>("DireccionActual")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("MigranteId")
+                        .HasColumnType("int");
+
                     b.Property<string>("NumeroTelefono")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SituacionLaboral")
                         .HasColumnType("nvarchar(max)");
 
+                    b.HasIndex("MigranteId");
+
                     b.HasDiscriminator().HasValue("Migrante");
-                });
-
-            modelBuilder.Entity("AmigosyfamiliaresMigrante", b =>
-                {
-                    b.HasOne("Migrantes.App.Dominio.Amigosyfamiliares", null)
-                        .WithMany()
-                        .HasForeignKey("AmigosYFamiliaresId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Migrantes.App.Dominio.Migrante", null)
-                        .WithMany()
-                        .HasForeignKey("MigranteId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("Migrantes.App.Dominio.Necesidades", b =>
@@ -268,6 +227,13 @@ namespace Persistencia.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Migrantes.App.Dominio.Migrante", b =>
+                {
+                    b.HasOne("Migrantes.App.Dominio.Migrante", null)
+                        .WithMany("AmigosYFamiliares")
+                        .HasForeignKey("MigranteId");
+                });
+
             modelBuilder.Entity("Migrantes.App.Dominio.Entidad", b =>
                 {
                     b.Navigation("Servicios");
@@ -275,6 +241,8 @@ namespace Persistencia.Migrations
 
             modelBuilder.Entity("Migrantes.App.Dominio.Migrante", b =>
                 {
+                    b.Navigation("AmigosYFamiliares");
+
                     b.Navigation("Necesidades");
                 });
 #pragma warning restore 612, 618

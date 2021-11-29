@@ -1,0 +1,29 @@
+﻿@page
+@model Migrantes.App.Presentacion.Pages.Novedades.DetailsModel
+@{
+}
+<form method="POST">
+    <input type="hidden" asp-for="Entity.Id">
+
+    <div>
+        <label asp-for="Entity.EstaActiva"></label>
+        <input type="checkbox" asp-for="Entity.EstaActiva" class="form-control" disabled>
+    </div>
+
+    <div  class="form-group">
+        <label asp-for="Entity.FechaNovedad"></label>
+        <input type="date" asp-for="Entity.FechaNovedad" class="form-control" disabled>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Entity.TextoExplicativo"></label>
+        <input asp-for="Entity.TextoExplicativo" class="form-control" disabled>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-success">Salvar</button>
+        <a asp-page="./List" class="btn btn-danger">
+            Cancelar
+        </a>
+    </div>
+</form>
