@@ -88,7 +88,6 @@ namespace Migrantes.App.Persistencia{
             var Migrante= _appContext.Migrantes.FirstOrDefault(p => p.Id == idMigrante);
 
             amigosyfamiliares.idMigranteAmigo=idMigrante1;
-
             if(Migrante != null){
                 if(Migrante.AmigosYFamiliares != null){
                     Migrante.AmigosYFamiliares.Add(amigosyfamiliares);

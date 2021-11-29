@@ -1,0 +1,26 @@
+﻿@page
+@using Migrantes.App.Dominio
+@model Migrantes.App.Presentacion.Pages.Calificaciones.CalificaciondeAppModel
+@{
+}
+
+
+<h1> Evalua la App E-Migrant</h1>
+
+
+<form method="post" class="scroll">
+    <div class="form-group">
+        <label asp-for="CalificacionApp.ValorCalificacion"> Valor de la calificacion</label>
+        <select asp-for="CalificacionApp.ValorCalificacion" asp-items="Html.GetEnumSelectList<ValorCalificacion>()" class="form-control" required="required" ></select> 
+
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CalificacionApp.numeroDocumentoMigrante"> Numero Documento</label>
+        <input asp-for="CalificacionApp.numeroDocumentoMigrante" class="form-control" required ="required">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Registrar Evaluacion</button>
+    
+
+</form>

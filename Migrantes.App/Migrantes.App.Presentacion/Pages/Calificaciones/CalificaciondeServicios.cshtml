@@ -1,0 +1,29 @@
+﻿@page
+@using Migrantes.App.Dominio
+@model Migrantes.App.Presentacion.Pages.Calificaciones.CalificaciondeServiciosModel
+@{
+}
+
+<h1> Evalua los servicios prestados</h1>
+
+
+<form method="post" class="scroll">
+
+    <div class="form-group">
+        <label asp-for="CalificacionServicios.TipoServicio">Tipo de Servicio Recibido</label>
+        <select asp-for="CalificacionServicios.TipoServicio" asp-items="Html.GetEnumSelectList<TipoServicio>()" class="form-control" required></select> 
+    </div>
+    <div class="form-group">
+        <label asp-for="CalificacionServicios.ValorCalificacion"> Valor de la Calificacion</label>
+        <select asp-for="CalificacionServicios.ValorCalificacion" asp-items="Html.GetEnumSelectList<ValorCalificacion>()" class="form-control" required ></select> 
+    </div>
+    <div class="form-group">
+        <label asp-for="CalificacionServicios.numeroDocumentoMigrante"> Numero de Documento</label>
+        <input asp-for="CalificacionServicios.numeroDocumentoMigrante" class="form-control" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Registrar Evaluacion</button>
+
+
+
+</form>
