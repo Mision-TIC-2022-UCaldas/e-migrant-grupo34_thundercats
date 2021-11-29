@@ -366,13 +366,6 @@ namespace Persistencia.Migrations
                     b.Navigation("Persona");
                 });
 
-            modelBuilder.Entity("Migrantes.App.Dominio.Migrante", b =>
-                {
-                    b.HasOne("Migrantes.App.Dominio.Migrante", null)
-                        .WithMany("AmigosYFamiliares")
-                        .HasForeignKey("MigranteId");
-                });
-
             modelBuilder.Entity("Migrantes.App.Dominio.Entidad", b =>
                 {
                     b.Navigation("Servicios");
