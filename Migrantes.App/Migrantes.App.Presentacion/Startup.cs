@@ -42,6 +42,7 @@ namespace Migrantes.App.Presentacion
             services.AddSingleton<IRepositorioEmergencia,RepositorioEmergencia>();
 
 
+            services.AddSingleton<IRepositorioUsuario,RepositorioUsuario>();
 
             // services.AddSingleton<IRepositorioPersona,RepositorioPersona>();
         }

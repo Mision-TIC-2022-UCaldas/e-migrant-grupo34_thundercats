@@ -275,6 +275,35 @@ namespace Persistencia.Migrations
                     b.ToTable("Servicios");
                 });
 
+            modelBuilder.Entity("Migrantes.App.Dominio.Usuario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("EstaActivo")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("PersonaId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Rol")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Username")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PersonaId");
+
+                    b.ToTable("Usuarios");
+                });
+
             modelBuilder.Entity("Migrantes.App.Dominio.Migrante", b =>
                 {
                     b.HasBaseType("Migrantes.App.Dominio.Persona");
@@ -326,6 +355,15 @@ namespace Persistencia.Migrations
                         .HasForeignKey("EntidadId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Migrantes.App.Dominio.Usuario", b =>
+                {
+                    b.HasOne("Migrantes.App.Dominio.Persona", "Persona")
+                        .WithMany()
+                        .HasForeignKey("PersonaId");
+
+                    b.Navigation("Persona");
                 });
 
             modelBuilder.Entity("Migrantes.App.Dominio.Entidad", b =>
