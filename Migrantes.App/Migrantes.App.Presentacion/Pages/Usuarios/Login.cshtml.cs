@@ -39,7 +39,7 @@ namespace Migrantes.App.Presentacion.Pages.Usuarios
 
             if (UsuarioEncontrado == null )
             {
-                return RedirectToPage("./Login");
+                return RedirectToPage("./Error");
             }
             else
             {

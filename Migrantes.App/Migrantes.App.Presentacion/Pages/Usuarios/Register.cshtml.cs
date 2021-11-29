@@ -31,7 +31,7 @@ namespace Migrantes.App.Presentacion.Pages.Usuarios
         {
             if (!ModelState.IsValid)
             {
-                return Page();
+                return RedirectToPage("./Error");
             }
 
             if (Entity.Id > 0)
@@ -40,9 +40,12 @@ namespace Migrantes.App.Presentacion.Pages.Usuarios
             }
             else
             {
-                _repoEntity.Add(Entity);
+                Usuario nuevo = _repoEntity.Add(Entity);
+                if (nuevo == null) {
+                    return RedirectToPage("./Error");
+                }
             }
-            return RedirectToPage("./Login");
+            return RedirectToPage("/Index");
         }
     }
 }

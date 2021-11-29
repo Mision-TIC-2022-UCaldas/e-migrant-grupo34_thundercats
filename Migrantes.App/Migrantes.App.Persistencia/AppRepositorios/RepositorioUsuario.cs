@@ -13,10 +13,29 @@ namespace Migrantes.App.Persistencia
         {
             Usuario usuario = _appContext.Usuarios.FirstOrDefault(p => p.Username == username);
 
-            return usuario;
+            if (usuario != null)
+            {
+                if (usuario.Password == password)
+                {
+                    return usuario;
+
+                } else
+                {
+                    return null;
+                }
+            }
+
+            return null;
+
         }
         public Usuario Add(Usuario entity)
         {
+            Usuario usuarioExiste = _appContext.Usuarios.FirstOrDefault(p => p.Username == entity.Username);
+
+            if (usuarioExiste != null) {
+                return null;
+            }
+
             var addedEntity = _appContext.Usuarios.Add(entity);
             _appContext.SaveChanges();
             return addedEntity.Entity;
