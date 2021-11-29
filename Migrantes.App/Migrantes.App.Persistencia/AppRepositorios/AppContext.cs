@@ -11,11 +11,14 @@ namespace Migrantes.App.Persistencia{
         public DbSet <Persona> Personas {get;set;}
         public DbSet <Migrante> Migrantes {get;set;}
         public DbSet <Necesidades> NecesidadesDb {get;set;}
+        public DbSet <Amigosyfamiliares> Amigosyfamiliares1 {get;set;}
+
+        
         public DbSet <Novedad> Novedades {get;set;}
 
         protected override void OnConfiguring (DbContextOptionsBuilder optionsBuilder ){
             if (!optionsBuilder.IsConfigured){
-                optionsBuilder.UseSqlServer(@"Data Source=localhost;Initial Catalog = Thundercats;Integrated Security = True");
+                optionsBuilder.UseSqlServer("Data Source =(localdb)\\MSSQLLocalDB; Initial Catalog=Thundercats");
             }
         }
 
