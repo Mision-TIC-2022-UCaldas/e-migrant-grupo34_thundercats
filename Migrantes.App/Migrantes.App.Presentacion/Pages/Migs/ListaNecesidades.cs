@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-
 using Migrantes.App.Persistencia;
 using Migrantes.App.Dominio;
 
@@ -21,6 +20,8 @@ namespace Migrantes.App.Presentacion.Pages.Migs
 
         public int numeroDocumento { get; set; }
 
+        public int Validacion { get; set; }
+
         public IEnumerable<Necesidades> necesidades { get; set; }
 
         public ListaNecesidadesModel(IRepositorioNecesidades _repoNecesidades)
@@ -29,7 +30,7 @@ namespace Migrantes.App.Presentacion.Pages.Migs
              this._repoNecesidades=_repoNecesidades;
 
         }
-        public void OnGet()
+        public void OnGet(int Validacion)
         {
             necesidades = _repoNecesidades.GetAllNecesidades();
         }

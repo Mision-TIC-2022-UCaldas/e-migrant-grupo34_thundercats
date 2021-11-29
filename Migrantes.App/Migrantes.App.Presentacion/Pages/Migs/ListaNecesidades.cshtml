@@ -2,14 +2,26 @@
 @model Migrantes.App.Presentacion.Pages.Migs.ListaNecesidadesModel
 @{
 }
-<h1>Listado de Emigrantes del Sistema</h1>
+<h1>Listado de Necesidaes del sistema</h1>
 
+<form method="get">
+    <div class="input-group">
+        <label form="Name">Por favor ingrese numero de documento</label>
+    </div>
+    <br>
+    <input class="form-control" asp-for="Validacion" required/>
+    <br>
+    <div class="input-group-append">
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    </div>
 <table class="table">
 <tr>
     @* <th>Id</th> *@
     <th>Tipo</th>
     <th>Prioridad</th>
     <th>Descripcion</th>
+    <th>Estado de la Necesidad</th>
+
     @* <th>Type</th> *@
     <th>
     </th>
@@ -20,8 +32,11 @@
         <td>@nece.Tipo</td>
         <td>@nece.Prioridad</td>
         <td>@nece.Descripcion</td>
+        <td>@nece.Validacion</td>
+
 
     </tr>
 }
 
 </table>
+</form>

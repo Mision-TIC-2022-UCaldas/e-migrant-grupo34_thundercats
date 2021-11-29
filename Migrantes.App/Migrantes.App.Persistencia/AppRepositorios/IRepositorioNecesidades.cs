@@ -16,6 +16,6 @@ namespace Migrantes.App.Persistencia
 
     Necesidades  GetNecesidades (int id);
 
-
+     //IEnumerable<Necesidades> GetAllByValidacion(int validacion);
    }
    }
