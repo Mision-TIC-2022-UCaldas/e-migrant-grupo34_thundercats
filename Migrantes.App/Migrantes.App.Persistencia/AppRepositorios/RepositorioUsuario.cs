@@ -9,6 +9,12 @@ namespace Migrantes.App.Persistencia
 
         private readonly AppDbContext _appContext = new AppDbContext();
 
+        public Usuario Login(string username, string password)
+        {
+            Usuario usuario = _appContext.Usuarios.FirstOrDefault(p => p.Username == username);
+
+            return usuario;
+        }
         public Usuario Add(Usuario entity)
         {
             var addedEntity = _appContext.Usuarios.Add(entity);

@@ -16,5 +16,6 @@ namespace Migrantes.App.Persistencia
         bool Delete(int idUsuario);
 
         Usuario Get(int idUsuario);
+        Usuario Login(string username, string password);
     }
 }

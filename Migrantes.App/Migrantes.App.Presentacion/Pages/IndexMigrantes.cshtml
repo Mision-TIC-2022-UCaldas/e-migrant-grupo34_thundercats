@@ -1,0 +1,25 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page Migrantes";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bienvendio a E-Migrant</h1>
+
+<h1>Menus Publicos para Migrantes</h1>
+<div>
+    <a asp-page="/Servicios/ConsultarTodos">
+        <h2>
+            Consultar Todos los Servicios
+        </h2>
+    </a>
+</div>
+<div>
+    <a asp-page="/Novedades/ConsultarNovedades">
+        <h2>
+            Consultar Todas las Novedades
+        </h2>
+    </a>
+</div>
+</div>
