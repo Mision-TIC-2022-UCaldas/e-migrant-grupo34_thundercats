@@ -3,6 +3,27 @@
 @{
 }
 
+<form method="get">
+    <div class="input-group">
+        <label form="Name">Buscar por Ciudad</label>
+ </div>
+ <br>
+        <input class="form-control" asp-for="Ciudad"/>
+<br>
+    <div class="input-group-append">
+            <button type="submit" class="btn btn-primary" >Buscar</button>
+        </div>
+<br>
+        <div class="input-group">
+        <label form="Name">Buscar por Nit</label>
+ </div>
+ <br>
+        <input class="form-control" asp-for="Nit" />
+<br>
+    <div class="input-group-append">
+            <button type="submit" class="btn btn-primary" >Buscar</button>
+        </div>
+
 <h1>Listado de Entidades asociadas a su usuario</h1>
 <table class="table">
 <tr>
@@ -17,7 +38,8 @@
 </tr>
 @foreach (var entity in Model.Entities)
 {
-    <tr>
+      <tr>
+          <td>@entity.Ciudad</td>
         <td>@entity.RazonSocial</td>
         <td>
             <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-pk="@entity.Id">
@@ -35,6 +57,29 @@
             </a>
         </td>
     </tr>
+}  
+@foreach (var entity1 in Model.Entities1){
+     <tr>
+          <td>@entity1.Ciudad</td>
+        <td>@entity1.RazonSocial</td>
+        <td>
+            <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-pk="@entity1.Id">
+                Edit
+            </a>
+        </td>
+        <td>
+            <a class="btn btn-info table-btn" asp-page="./Details" asp-route-pk="@entity1.Id">
+                Detail
+            </a>
+        </td>
+        <td>
+            <a class="btn btn-info table-btn" asp-page="../Servicios/ListActivos" asp-route-entidadId="@entity1.Id">
+                Ver Servicios Habilitados
+            </a>
+        </td>
+    </tr>
 }
+    
 
 </table>
+</form>

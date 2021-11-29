@@ -16,6 +16,11 @@ namespace Migrantes.App.Persistencia
 
     Entidad  Get (int idEntidad );
     IEnumerable<Servicio> GetServiciosEntidad(int idEntidad);
+
+    IEnumerable<Entidad> GetAllByCiudad(string ciudad);
+
+     IEnumerable<Entidad> GetAllByNit(int nit);
     }
+
 
 }
